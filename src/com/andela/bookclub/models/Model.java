@@ -3,7 +3,7 @@ package com.andela.bookclub.models;
 /*
 *  The superclass for all model classes
 */
-public abstract class Model {
+public class Model {
     protected String id;
 
     public String getId() {

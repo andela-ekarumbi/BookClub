@@ -1,18 +1,33 @@
 package com.andela.bookclub.models;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.Before;
+import org.mockito.Mockito;
 
-/**
- * Created by emkarumbi on 30/01/2016.
- */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
+
+
 public class ModelTest {
 
-    @org.junit.Test
-    public void testGetId() throws Exception {
+    // Stub object to use for testing abstract class
 
+    Model model = Mockito.mock(Model.class);
+
+    // Assign an id to the model object so as to test getId
+
+    @Before
+    public void beforeTestGetId() {
+        model.setId("lorem12345");
     }
 
-    @org.junit.Test
+    @Test
+    public void testGetId() throws Exception {
+        assertEquals("lorem12345", model.getId());
+        assertNotSame("lorem12345", model.getId());
+    }
+
+    @Test
     public void testSetId() throws Exception {
 
     }

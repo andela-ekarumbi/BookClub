@@ -4,7 +4,7 @@ package com.andela.bookclub.models;
 *  The superclass for all model classes
 */
 public class Model {
-    protected String id;
+    private String id;
 
     public String getId() {
         return id;

@@ -55,4 +55,24 @@ public class MemberTest {
     public void testGetAge() throws Exception {
 
     }
+
+    @Test
+    public void testGetGender() throws Exception {
+
+    }
+
+    @Test
+    public void testGetEmailAddress() throws Exception {
+
+    }
+
+    @Test
+    public void testGetPhoneNumber() throws Exception {
+
+    }
+
+    @Test
+    public void testGetJoinedDate() throws Exception {
+
+    }
 }

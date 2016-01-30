@@ -16,7 +16,7 @@ public class ModelTest {
     Model model;
 
     /*
-    * One test should be adequate for each getter-setter pair.
+    * One test should be adequate for each getter-setter pair
     * */
 
     @Before

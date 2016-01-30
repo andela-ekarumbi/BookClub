@@ -10,23 +10,23 @@ public abstract class Member extends Model {
 
     // Private attributes
 
-    protected String surname;
+    private String surname;
 
-    protected String firstName;
+    private String firstName;
 
-    protected String middleName;
+    private String middleName;
 
-    protected String nationalIdNumber;
+    private String nationalIdNumber;
 
-    protected int age;
+    private int age;
 
-    protected String gender;
+    private String gender;
 
-    protected String emailAddress;
+    private String emailAddress;
 
-    protected String phoneNumber;
+    private String phoneNumber;
 
-    protected Date joinedDate;
+    private Date joinedDate;
 
     // Setters and getters
 

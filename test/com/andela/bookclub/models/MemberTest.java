@@ -13,42 +13,54 @@ public class MemberTest {
 
     // Private variable to use for testing
 
-    Member member;
+    Member member = mock(Member.class, Mockito.CALLS_REAL_METHODS);
 
     @Before
     public void beforeTestGetSurname() {
-        member = mock(Member.class, Mockito.CALLS_REAL_METHODS);
         member.setSurname("Smith");
     }
 
     @Test
     public void testGetSurname() throws Exception {
         String memberSurname = member.getSurname();
+        assertNotSame(null, memberSurname);
         assertEquals("Smith", memberSurname);
-        assertNotSame("smith", memberSurname);
     }
 
     @Before
     public void beforeTestGetFirstName() {
-        member = mock(Member.class, Mockito.CALLS_REAL_METHODS);
         member.setFirstName("John");
     }
 
     @Test
     public void testGetFirstName() throws Exception {
         String memberFirstName = member.getFirstName();
+        assertNotSame(null, memberFirstName);
         assertEquals("John", memberFirstName);
-        assertNotSame("john", memberFirstName);
+    }
+
+    @Before
+    public void beforeTestGetMiddletName() {
+        member.setMiddleName("Kamau");
     }
 
     @Test
     public void testGetMiddleName() throws Exception {
+        String memberMiddleName = member.getMiddleName();
+        assertNotSame(null, memberMiddleName);
+        assertEquals("Kamau", memberMiddleName);
+    }
 
+    @Before
+    public void beforeTestGetNationalIdNumber() {
+        member.setNationalIdNumber("27855410");
     }
 
     @Test
     public void testGetNationalIdNumber() throws Exception {
-
+        String membernationalIdNumber = member.getNationalIdNumber();
+        assertNotSame(null, membernationalIdNumber);
+        assertEquals("27855410", membernationalIdNumber);
     }
 
     @Test

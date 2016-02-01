@@ -63,9 +63,16 @@ public class MemberTest {
         assertEquals("27855410", membernationalIdNumber);
     }
 
+    @Before
+    public void beforeTestGetAge() {
+        member.setAge(25);
+    }
+
     @Test
     public void testGetAge() throws Exception {
-
+        int memberAge = member.getAge();
+        assertNotSame(0, memberAge);
+        assertEquals(25, memberAge);
     }
 
     @Test

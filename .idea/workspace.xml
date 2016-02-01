@@ -43,8 +43,8 @@
       <file leaf-file-name="MemberTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/MemberTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6708595">
-              <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.45073375">
+              <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#438#439#0" expanded="true" />
@@ -55,6 +55,8 @@
                 <element signature="e#1113#1114#0" expanded="true" />
                 <element signature="e#1402#1403#0" expanded="true" />
                 <element signature="e#1456#1457#0" expanded="true" />
+                <element signature="e#1765#1766#0" expanded="true" />
+                <element signature="e#1798#1799#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -571,6 +573,9 @@
     <history-entry file="MemberTest - 2016.02.01 at 10h 16m 48s.xml">
       <configuration name="MemberTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MemberTest - 2016.02.01 at 10h 34m 51s.xml">
+      <configuration name="MemberTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="MemberTest_testGetFirstName - 2016.02.01 at 10h 12m 02s.xml">
       <configuration name="MemberTest.testGetFirstName" configurationId="JUnit" />
     </history-entry>
@@ -579,9 +584,6 @@
     </history-entry>
     <history-entry file="MemberTest_testGetFirstName - 2016.02.01 at 10h 15m 50s.xml">
       <configuration name="MemberTest.testGetFirstName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ModelTest - 2016.01.30 at 23h 47m 11s.xml">
-      <configuration name="ModelTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ModelTest - 2016.01.30 at 23h 48m 14s.xml">
       <configuration name="ModelTest" configurationId="JUnit" />
@@ -659,6 +661,8 @@
             <element signature="e#1113#1114#0" expanded="true" />
             <element signature="e#1402#1403#0" expanded="true" />
             <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -696,8 +700,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/MemberTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6708595">
-          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.45073375">
+          <caret line="66" column="33" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#438#439#0" expanded="true" />
@@ -708,6 +712,8 @@
             <element signature="e#1113#1114#0" expanded="true" />
             <element signature="e#1402#1403#0" expanded="true" />
             <element signature="e#1456#1457#0" expanded="true" />
+            <element signature="e#1765#1766#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
           </folding>
         </state>
       </provider>

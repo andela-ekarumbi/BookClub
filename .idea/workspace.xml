@@ -54,10 +54,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StaffMember.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StaffMember.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/models/StaffMember.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10344828">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
               <folding>
                 <element signature="e#181#182#0" expanded="true" />
@@ -68,13 +68,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="StaffMemberTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/StaffMemberTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.18620689">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -88,12 +98,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/Member.java" />
         <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/StaffMemberTest.groovy" />
-        <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/StaffMemberTest.java" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/Model.java" />
         <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/ModelTest.java" />
         <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/MemberTest.java" />
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/StaffMember.java" />
+        <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/StaffMemberTest.java" />
       </list>
     </option>
   </component>
@@ -744,13 +754,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/models/StaffMember.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10344828">
+        <state vertical-scroll-proportion="0.0">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding>
             <element signature="e#181#182#0" expanded="true" />
             <element signature="e#235#236#0" expanded="true" />
             <element signature="e#281#282#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/StaffMemberTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18620689">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

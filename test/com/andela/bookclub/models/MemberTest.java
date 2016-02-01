@@ -75,9 +75,17 @@ public class MemberTest {
         assertEquals(25, memberAge);
     }
 
+    @Before
+    public void beforeTestGetGender() {
+        member.setGender("M");
+    }
+
     @Test
     public void testGetGender() throws Exception {
-
+        String memberGender = member.getGender();
+        assertNotSame(null, memberGender);
+        assertEquals(1, memberGender.length());
+        assertEquals("M", member);
     }
 
     @Test

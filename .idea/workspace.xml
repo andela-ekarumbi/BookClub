@@ -82,10 +82,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StudentMember.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StudentMember.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/models/StudentMember.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1572327">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="e#168#169#0" expanded="true" />
@@ -96,13 +96,27 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="StudentMemberTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/StudentMemberTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44025156">
+              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#326#327#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -123,6 +137,7 @@
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/StaffMember.java" />
         <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/StaffMemberTest.java" />
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/StudentMember.java" />
+        <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/StudentMemberTest.java" />
       </list>
     </option>
   </component>
@@ -257,7 +272,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StaffMemberTest">
+  <component name="RunManager" selected="JUnit.StudentMemberTest">
     <configuration default="false" name="MemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -272,32 +287,6 @@
       <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.MemberTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="MemberTest.testGetAge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.andela.bookclub.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="BookClub" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
-      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.MemberTest" />
-      <option name="METHOD_NAME" value="testGetAge" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -374,6 +363,32 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
       <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.StaffMemberTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="StudentMemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.andela.bookclub.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="BookClub" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
+      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.StudentMemberTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -575,18 +590,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.MemberTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetAge" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetEmailAddress" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetGender" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.StaffMemberTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetEmailAddress" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetGender" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.StaffMemberTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.StudentMemberTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.StaffMemberTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MemberTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetGender" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetEmailAddress" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetAge" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.StudentMemberTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.StaffMemberTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.MemberTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetGender" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetEmailAddress" />
       </list>
     </recent_temporary>
   </component>
@@ -602,9 +617,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MemberTest - 2016.02.01 at 11h 10m 06s.xml">
-      <configuration name="MemberTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MemberTest - 2016.02.01 at 11h 10m 48s.xml">
       <configuration name="MemberTest" configurationId="JUnit" />
     </history-entry>
@@ -632,6 +644,9 @@
     <history-entry file="StaffMemberTest - 2016.02.01 at 20h 33m 27s.xml">
       <configuration name="StaffMemberTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="StudentMemberTest - 2016.02.01 at 22h 42m 17s.xml">
+      <configuration name="StudentMemberTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -643,7 +658,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -797,12 +812,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/models/StudentMember.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1572327">
+        <state vertical-scroll-proportion="0.0">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="e#168#169#0" expanded="true" />
             <element signature="e#212#213#0" expanded="true" />
             <element signature="e#248#249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/StudentMemberTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44025156">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
           </folding>
         </state>
       </provider>

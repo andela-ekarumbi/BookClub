@@ -3,6 +3,7 @@ package com.andela.bookclub.models;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotSame;
@@ -112,8 +113,14 @@ public class MemberTest {
         assertEquals("0723220576", memberPhoneNumber);
     }
 
+    @Before
+    public void beforeTestGetJoinedDate() {
+        member.setJoinedDate(new Date());
+    }
+
     @Test
     public void testGetJoinedDate() throws Exception {
-
+        Date memberJoinedDate = member.getJoinedDate();
+        assertNotSame(null, memberJoinedDate);
     }
 }

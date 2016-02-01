@@ -43,25 +43,28 @@
       <file leaf-file-name="MemberTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/MemberTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33962265">
-              <caret line="103" column="40" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.5597484">
+              <caret line="117" column="15" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#438#439#0" expanded="true" />
-                <element signature="e#480#481#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#1068#1069#0" expanded="true" />
-                <element signature="e#1113#1114#0" expanded="true" />
-                <element signature="e#1402#1403#0" expanded="true" />
-                <element signature="e#1456#1457#0" expanded="true" />
-                <element signature="e#1765#1766#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
-                <element signature="e#2031#2032#0" expanded="true" />
-                <element signature="e#2068#2069#0" expanded="true" />
-                <element signature="e#2369#2370#0" expanded="true" />
-                <element signature="e#2422#2423#0" expanded="true" />
-                <element signature="e#2769#2770#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#503#504#0" expanded="true" />
+                <element signature="e#770#771#0" expanded="true" />
+                <element signature="e#813#814#0" expanded="true" />
+                <element signature="e#1091#1092#0" expanded="true" />
+                <element signature="e#1136#1137#0" expanded="true" />
+                <element signature="e#1425#1426#0" expanded="true" />
+                <element signature="e#1479#1480#0" expanded="true" />
+                <element signature="e#1788#1789#0" expanded="true" />
+                <element signature="e#1821#1822#0" expanded="true" />
+                <element signature="e#2054#2055#0" expanded="true" />
+                <element signature="e#2091#2092#0" expanded="true" />
+                <element signature="e#2392#2393#0" expanded="true" />
+                <element signature="e#2445#2446#0" expanded="true" />
+                <element signature="e#2741#2742#0" expanded="true" />
+                <element signature="e#2792#2793#0" expanded="true" />
+                <element signature="e#3085#3086#0" expanded="true" />
+                <element signature="e#3133#3134#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -227,7 +230,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MemberTest.testGetGender">
+  <component name="RunManager" selected="JUnit.MemberTest">
     <configuration default="false" name="MemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -552,8 +555,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetGender" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MemberTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MemberTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetGender" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetEmailAddress" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetAge" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.MemberTest.testGetFirstName" />
@@ -584,17 +587,17 @@
     <history-entry file="MemberTest - 2016.02.01 at 11h 10m 48s.xml">
       <configuration name="MemberTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MemberTest - 2016.02.01 at 11h 19m 59s.xml">
+      <configuration name="MemberTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MemberTest - 2016.02.01 at 11h 21m 49s.xml">
+      <configuration name="MemberTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="MemberTest_testGetAge - 2016.02.01 at 10h 55m 00s.xml">
       <configuration name="MemberTest.testGetAge" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MemberTest_testGetEmailAddress - 2016.02.01 at 11h 06m 32s.xml">
       <configuration name="MemberTest.testGetEmailAddress" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MemberTest_testGetFirstName - 2016.02.01 at 10h 12m 02s.xml">
-      <configuration name="MemberTest.testGetFirstName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MemberTest_testGetFirstName - 2016.02.01 at 10h 12m 14s.xml">
-      <configuration name="MemberTest.testGetFirstName" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MemberTest_testGetFirstName - 2016.02.01 at 10h 15m 50s.xml">
       <configuration name="MemberTest.testGetFirstName" configurationId="JUnit" />
@@ -658,21 +661,24 @@
           <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1456#1457#0" expanded="true" />
-            <element signature="e#1765#1766#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-            <element signature="e#2031#2032#0" expanded="true" />
-            <element signature="e#2068#2069#0" expanded="true" />
-            <element signature="e#2369#2370#0" expanded="true" />
-            <element signature="e#2422#2423#0" expanded="true" />
-            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1821#1822#0" expanded="true" />
+            <element signature="e#2054#2055#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2741#2742#0" expanded="true" />
+            <element signature="e#2792#2793#0" expanded="true" />
+            <element signature="e#3085#3086#0" expanded="true" />
+            <element signature="e#3133#3134#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -710,25 +716,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/MemberTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33962265">
-          <caret line="103" column="40" selection-start-line="103" selection-start-column="40" selection-end-line="103" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.5597484">
+          <caret line="117" column="15" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#1068#1069#0" expanded="true" />
-            <element signature="e#1113#1114#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1456#1457#0" expanded="true" />
-            <element signature="e#1765#1766#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-            <element signature="e#2031#2032#0" expanded="true" />
-            <element signature="e#2068#2069#0" expanded="true" />
-            <element signature="e#2369#2370#0" expanded="true" />
-            <element signature="e#2422#2423#0" expanded="true" />
-            <element signature="e#2769#2770#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#813#814#0" expanded="true" />
+            <element signature="e#1091#1092#0" expanded="true" />
+            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="e#1425#1426#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1788#1789#0" expanded="true" />
+            <element signature="e#1821#1822#0" expanded="true" />
+            <element signature="e#2054#2055#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2445#2446#0" expanded="true" />
+            <element signature="e#2741#2742#0" expanded="true" />
+            <element signature="e#2792#2793#0" expanded="true" />
+            <element signature="e#3085#3086#0" expanded="true" />
+            <element signature="e#3133#3134#0" expanded="true" />
           </folding>
         </state>
       </provider>

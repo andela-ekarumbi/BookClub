@@ -88,9 +88,16 @@ public class MemberTest {
         assertEquals("M", member);
     }
 
+    @Before
+    public void beforeGetGetEmail() {
+        member.setEmailAddress("foo@bar.com");
+    }
+
     @Test
     public void testGetEmailAddress() throws Exception {
-
+        String memberEmailAddress = member.getEmailAddress();
+        assertNotSame(null, memberEmailAddress);
+        assertEquals("foo@bar.com", memberEmailAddress);
     }
 
     @Test

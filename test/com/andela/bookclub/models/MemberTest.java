@@ -85,7 +85,7 @@ public class MemberTest {
         String memberGender = member.getGender();
         assertNotSame(null, memberGender);
         assertEquals(1, memberGender.length());
-        assertEquals("M", member);
+        assertEquals("M", memberGender);
     }
 
     @Before
@@ -100,9 +100,16 @@ public class MemberTest {
         assertEquals("foo@bar.com", memberEmailAddress);
     }
 
+    @Before
+    public void beforeGetPhoneNumber() {
+        member.setPhoneNumber("0723220576");
+    }
+
     @Test
     public void testGetPhoneNumber() throws Exception {
-
+        String memberPhoneNumber = member.getPhoneNumber();
+        assertNotSame(null, memberPhoneNumber);
+        assertEquals("0723220576", memberPhoneNumber);
     }
 
     @Test

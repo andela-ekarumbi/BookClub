@@ -64,9 +64,12 @@
       <file leaf-file-name="LogEntryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/LogEntryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5660377">
-              <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-              <folding />
+            <state vertical-scroll-proportion="0.33962265">
+              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding>
+                <element signature="e#849#850#0" expanded="true" />
+                <element signature="e#923#924#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -626,13 +629,13 @@
     <history-entry file="BookRequestTest_testGetReturnByDate - 2016.02.04 at 13h 58m 08s.xml">
       <configuration name="BookRequestTest.testGetReturnByDate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookRequestTest_testIsRequestGranted - 2016.02.04 at 13h 42m 51s.xml">
-      <configuration name="BookRequestTest.testIsRequestGranted" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookRequestTest_testIsRequestGranted - 2016.02.04 at 13h 47m 15s.xml">
       <configuration name="BookRequestTest.testIsRequestGranted" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LogEntryTest - 2016.02.04 at 14h 19m 19s.xml">
+      <configuration name="LogEntryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogEntryTest - 2016.02.04 at 16h 08m 19s.xml">
       <configuration name="LogEntryTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1089,9 +1092,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/LogEntryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5660377">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding />
+        <state vertical-scroll-proportion="0.33962265">
+          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#923#924#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -35,9 +35,16 @@ public class LogEntryTest {
         assertEquals(member, logMember);
     }
 
+    @Before
+    public void beforeTestGetEntryDescription() {
+        logEntry.setEntryDescription("Lorem ipsum dolor sit amet");
+    }
+
     @Test
     public void testGetEntryDescription() throws Exception {
-
+        String entryDescription = logEntry.getEntryDescription();
+        assertNotSame(null, entryDescription);
+        assertEquals("Lorem ipsum dolor sit amet", entryDescription);
     }
 
     @Test

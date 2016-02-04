@@ -53,9 +53,16 @@ public class BookRequestTest {
         assertEquals(member, bookBorrower);
     }
 
+    @Before
+    public void beforeTestGetRequestDate() {
+        bookRequest.setRequestDate(bookRequestedDate);
+    }
+
     @Test
     public void testGetRequestDate() throws Exception {
-
+        Date requestedDate = bookRequest.getRequestDate();
+        assertNotSame(null, requestedDate);
+        assertEquals(bookRequestedDate, requestedDate);
     }
 
     @Test

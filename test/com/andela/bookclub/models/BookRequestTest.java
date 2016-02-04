@@ -8,13 +8,21 @@ import java.util.Calendar;
 
 import static org.junit.Assert.*;
 
+import static org.mockito.Mockito.CALLS_REAL_METHODS;
+import static org.mockito.Mockito.mock;
+
 public class BookRequestTest {
 
     // Private variables to use during testing
 
     private BookRequest bookRequest = new BookRequest();
+
     private Book bookToRequest = new Book();
+
+    private Member member;
+
     private Calendar calendar;
+
     private Date bookRequestedDate = new Date();
 
     @Before
@@ -30,9 +38,19 @@ public class BookRequestTest {
         assertEquals(bookToRequest, requestedBook);
     }
 
+    @Before
+    public void beforeTestGetBorrower() {
+        member = mock(Member.class, CALLS_REAL_METHODS);
+        member.setFirstName("John");
+        member.setJoinedDate(new Date());
+        bookRequest.setBorrower(member);
+    }
+
     @Test
     public void testGetBorrower() throws Exception {
-
+        Member bookBorrower = bookRequest.getBorrower();
+        assertNotSame(null, bookBorrower);
+        assertEquals(member, bookBorrower);
     }
 
     @Test

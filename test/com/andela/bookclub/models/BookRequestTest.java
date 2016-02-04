@@ -21,9 +21,11 @@ public class BookRequestTest {
 
     private Member member;
 
-    private Calendar calendar;
-
     private Date bookRequestedDate = new Date();
+
+    private Date bookRequestGrantedDate;
+
+    private Date bookDueDate;
 
     @Before
     public void beforeTestGetRequestedBook() {
@@ -75,9 +77,30 @@ public class BookRequestTest {
         assertFalse(bookRequest.isRequestGranted());
     }
 
+    @Before
+    public void beforeTestGetGrantedDate() {
+
+        // Create Calendar object to use for date operations
+        Calendar calendar = Calendar.getInstance();
+
+        // Assign a Date object to our calendar
+        calendar.setTime(bookRequestedDate);
+
+        // Add 3 days to the calendar time
+        calendar.add(Calendar.DAY_OF_MONTH, 3);
+
+        // Retrieve a Date object from the calendar and set
+        // it as the day the request is granted.
+        bookRequestGrantedDate = calendar.getTime();
+
+        bookRequest.setGrantedDate(bookRequestGrantedDate);
+    }
+
     @Test
     public void testGetGrantedDate() throws Exception {
-
+        Date grantedDate = bookRequest.getGrantedDate();
+        assertNotSame(null, grantedDate);
+        assertEquals(bookRequestGrantedDate, grantedDate);
     }
 
     @Test

@@ -76,8 +76,8 @@
       <file leaf-file-name="BookRequestTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/BookRequestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4821803">
-              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.38784066">
+              <caret line="108" column="40" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -617,9 +617,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookRequestTest - 2016.02.04 at 12h 14m 14s.xml">
-      <configuration name="BookRequestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookRequestTest - 2016.02.04 at 12h 19m 43s.xml">
       <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
@@ -627,6 +624,9 @@
       <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BookRequestTest - 2016.02.04 at 13h 12m 36s.xml">
+      <configuration name="BookRequestTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookRequestTest - 2016.02.04 at 13h 19m 42s.xml">
       <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BookTest - 2016.02.04 at 10h 35m 50s.xml">
@@ -1053,8 +1053,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/BookRequestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4821803">
-          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.38784066">
+          <caret line="108" column="40" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

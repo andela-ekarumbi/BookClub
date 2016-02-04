@@ -21,6 +21,8 @@ public class BookRequestTest {
 
     private Member member;
 
+    private StaffMember staffMember;
+
     private Date bookRequestedDate = new Date();
 
     private Date bookRequestGrantedDate;
@@ -103,9 +105,18 @@ public class BookRequestTest {
         assertEquals(bookRequestGrantedDate, grantedDate);
     }
 
+    @Before
+    public void beforeTestGetGranter() {
+        staffMember = new StaffMember();
+        staffMember.setSurname("Kamau");
+        bookRequest.setGranter(staffMember);
+    }
+
     @Test
     public void testGetGranter() throws Exception {
-
+        StaffMember requestGranter = bookRequest.getGranter();
+        assertNotSame(null, requestGranter);
+        assertEquals(staffMember, requestGranter);
     }
 
     @Test

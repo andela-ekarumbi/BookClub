@@ -37,9 +37,17 @@ public class BookTest {
         assertEquals("1234-5678-9123", bookIsbn);
     }
 
+    @Before
+    public void beforeTestGetAuthorName() {
+        book.setAuthorName("John Doe");
+    }
+
     @Test
     public void testGetAuthorName() throws Exception {
-
+        String bookAuthorName = book.getAuthorName();
+        assertNotSame(null, bookAuthorName);
+        assertNotSame("", bookAuthorName);
+        assertEquals("John Doe", bookAuthorName);
     }
 
     @Test

@@ -50,8 +50,16 @@ public class BookTest {
         assertEquals("John Doe", bookAuthorName);
     }
 
+    @Before
+    public void beforeTestGetSynopsis() {
+        book.setSynopsis("Lorem ipsum dolor sit amet");
+    }
+
     @Test
     public void testGetSynopsis() throws Exception {
-
+        String bookSynopsis = book.getSynopsis();
+        assertNotSame(null, bookSynopsis);
+        assertNotSame("", bookSynopsis);
+        assertEquals("Lorem ipsum dolor sit amet", bookSynopsis);
     }
 }

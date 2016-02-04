@@ -24,9 +24,17 @@ public class BookTest {
         assertEquals("Foo", bookTitle);
     }
 
+    @Before
+    public void beforeTestGetIsbn() {
+        book.setIsbn("1234-5678-9123");
+    }
+
     @Test
     public void testGetIsbn() throws Exception {
-
+        String bookIsbn = book.getIsbn();
+        assertNotSame(null, bookIsbn);
+        assertNotSame("", bookIsbn);
+        assertEquals("1234-5678-9123", bookIsbn);
     }
 
     @Test

@@ -29,6 +29,23 @@ public class BookRequestTest {
 
     private Date bookDueDate;
 
+    // Utility function to add a given number of days to a date object
+
+    private Date addDaysToDate(Date startDate, int daysToAdd) {
+
+        // Create Calendar object to use for date operations
+        Calendar calendar = Calendar.getInstance();
+
+        // Assign the given Date object to our calendar
+        calendar.setTime(startDate);
+
+        // Add the specified number of days to the calendar time
+        calendar.add(Calendar.DAY_OF_MONTH, daysToAdd);
+
+        // Retrieve a Date object from the calendar and return it.
+        return calendar.getTime();
+    }
+
     @Before
     public void beforeTestGetRequestedBook() {
         bookToRequest.setTitle("Treasure Island");
@@ -81,20 +98,7 @@ public class BookRequestTest {
 
     @Before
     public void beforeTestGetGrantedDate() {
-
-        // Create Calendar object to use for date operations
-        Calendar calendar = Calendar.getInstance();
-
-        // Assign a Date object to our calendar
-        calendar.setTime(bookRequestedDate);
-
-        // Add 3 days to the calendar time
-        calendar.add(Calendar.DAY_OF_MONTH, 3);
-
-        // Retrieve a Date object from the calendar and set
-        // it as the day the request is granted.
-        bookRequestGrantedDate = calendar.getTime();
-
+        bookRequestGrantedDate = addDaysToDate(bookRequestedDate, 3);
         bookRequest.setGrantedDate(bookRequestGrantedDate);
     }
 
@@ -119,9 +123,17 @@ public class BookRequestTest {
         assertEquals(staffMember, requestGranter);
     }
 
+    @Before
+    public void beforeTestGetReturnByDate() {
+        bookDueDate = addDaysToDate(bookRequestedDate, 14);
+        bookRequest.setReturnByDate(bookDueDate);
+    }
+
     @Test
     public void testGetReturnByDate() throws Exception {
-
+        Date returnByDate = bookRequest.getReturnByDate();
+        assertNotSame(null, returnByDate);
+        assertEquals(bookDueDate, returnByDate);
     }
 
     @Test

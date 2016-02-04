@@ -76,10 +76,15 @@
       <file leaf-file-name="BookRequestTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/BookRequestTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38784066">
-              <caret line="108" column="40" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.5283019">
+              <caret line="133" column="50" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#addDaysToDate#0;class#BookRequestTest#0" expanded="false" />
+                <element signature="method#beforeTestGetRequestedBook#0;class#BookRequestTest#0" expanded="false" />
+                <element signature="method#testGetRequestedBook#0;class#BookRequestTest#0" expanded="false" />
+                <element signature="method#beforeTestGetBorrower#0;class#BookRequestTest#0" expanded="false" />
+                <element signature="method#testGetBorrower#0;class#BookRequestTest#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -259,33 +264,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BookRequestTest">
-    <configuration default="false" name="StudentMemberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.andela.bookclub.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="BookClub" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
-      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.StudentMemberTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.BookRequestTest.testGetReturnByDate">
     <configuration default="false" name="BookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -312,58 +291,6 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="BookTest.testGetTitle" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.andela.bookclub.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="BookClub" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
-      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.BookTest" />
-      <option name="METHOD_NAME" value="testGetTitle" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BookTest.testGetIsbn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.andela.bookclub.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="BookClub" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
-      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.BookTest" />
-      <option name="METHOD_NAME" value="testGetIsbn" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="BookRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -378,6 +305,84 @@
       <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.BookRequestTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BookRequestTest.testIsRequestGranted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.andela.bookclub.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="BookClub" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
+      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.BookRequestTest" />
+      <option name="METHOD_NAME" value="testIsRequestGranted" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BookRequestTest.testGetGranter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.andela.bookclub.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="BookClub" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
+      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.BookRequestTest" />
+      <option name="METHOD_NAME" value="testGetGranter" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="BookRequestTest.testGetReturnByDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.andela.bookclub.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="BookClub" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.andela.bookclub.models" />
+      <option name="MAIN_CLASS_NAME" value="com.andela.bookclub.models.BookRequestTest" />
+      <option name="METHOD_NAME" value="testGetReturnByDate" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -589,19 +594,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.StudentMemberTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.BookTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BookTest.testGetTitle" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.BookTest.testGetIsbn" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.BookRequestTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.BookTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BookRequestTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BookRequestTest.testIsRequestGranted" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BookRequestTest.testGetGranter" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.BookRequestTest.testGetReturnByDate" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BookRequestTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.BookTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.BookTest.testGetIsbn" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BookTest.testGetTitle" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.StudentMemberTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BookRequestTest.testGetReturnByDate" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BookRequestTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BookRequestTest.testGetGranter" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.BookRequestTest.testIsRequestGranted" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.BookTest" />
       </list>
     </recent_temporary>
   </component>
@@ -617,35 +622,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookRequestTest - 2016.02.04 at 12h 19m 43s.xml">
-      <configuration name="BookRequestTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BookRequestTest - 2016.02.04 at 13h 10m 24s.xml">
-      <configuration name="BookRequestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookRequestTest - 2016.02.04 at 13h 12m 36s.xml">
       <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BookRequestTest - 2016.02.04 at 13h 19m 42s.xml">
       <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookTest - 2016.02.04 at 10h 35m 50s.xml">
-      <configuration name="BookTest" configurationId="JUnit" />
+    <history-entry file="BookRequestTest - 2016.02.04 at 13h 46m 00s.xml">
+      <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookTest - 2016.02.04 at 11h 01m 28s.xml">
-      <configuration name="BookTest" configurationId="JUnit" />
+    <history-entry file="BookRequestTest - 2016.02.04 at 13h 46m 15s.xml">
+      <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookTest_testGetIsbn - 2016.02.04 at 10h 57m 47s.xml">
-      <configuration name="BookTest.testGetIsbn" configurationId="JUnit" />
+    <history-entry file="BookRequestTest - 2016.02.04 at 13h 51m 14s.xml">
+      <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BookTest_testGetTitle - 2016.02.04 at 10h 49m 44s.xml">
-      <configuration name="BookTest.testGetTitle" configurationId="JUnit" />
+    <history-entry file="BookRequestTest - 2016.02.04 at 13h 57m 41s.xml">
+      <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StaffMemberTest - 2016.02.01 at 20h 33m 27s.xml">
-      <configuration name="StaffMemberTest" configurationId="JUnit" />
+    <history-entry file="BookRequestTest_testGetGranter - 2016.02.04 at 13h 53m 15s.xml">
+      <configuration name="BookRequestTest.testGetGranter" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StudentMemberTest - 2016.02.01 at 22h 42m 17s.xml">
-      <configuration name="StudentMemberTest" configurationId="JUnit" />
+    <history-entry file="BookRequestTest_testGetReturnByDate - 2016.02.04 at 13h 58m 08s.xml">
+      <configuration name="BookRequestTest.testGetReturnByDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookRequestTest_testIsRequestGranted - 2016.02.04 at 13h 42m 51s.xml">
+      <configuration name="BookRequestTest.testIsRequestGranted" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BookRequestTest_testIsRequestGranted - 2016.02.04 at 13h 47m 15s.xml">
+      <configuration name="BookRequestTest.testIsRequestGranted" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -689,7 +694,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1053,10 +1060,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/BookRequestTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38784066">
-          <caret line="108" column="40" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.5283019">
+          <caret line="133" column="50" selection-start-line="133" selection-start-column="50" selection-end-line="133" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addDaysToDate#0;class#BookRequestTest#0" expanded="false" />
+            <element signature="method#beforeTestGetRequestedBook#0;class#BookRequestTest#0" expanded="false" />
+            <element signature="method#testGetRequestedBook#0;class#BookRequestTest#0" expanded="false" />
+            <element signature="method#beforeTestGetBorrower#0;class#BookRequestTest#0" expanded="false" />
+            <element signature="method#testGetBorrower#0;class#BookRequestTest#0" expanded="false" />
           </folding>
         </state>
       </provider>

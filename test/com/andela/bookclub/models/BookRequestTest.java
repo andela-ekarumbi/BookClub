@@ -65,9 +65,14 @@ public class BookRequestTest {
         assertEquals(bookRequestedDate, requestedDate);
     }
 
+    @Before
+    public void beforeTestIsRequestGranted() {
+        bookRequest.setRequestGranted(false);
+    }
+
     @Test
     public void testIsRequestGranted() throws Exception {
-
+        assertFalse(bookRequest.isRequestGranted());
     }
 
     @Test

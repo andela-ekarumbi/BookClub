@@ -86,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookRequest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BookRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/models/BookRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25157234">
+            <state vertical-scroll-proportion="0.0">
               <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
               <folding>
                 <element signature="e#466#467#0" expanded="true" />
@@ -128,13 +128,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="BookRequestTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/BookRequestTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9371069">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -159,6 +169,7 @@
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/Book.java" />
         <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/BookTest.java" />
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/BookRequest.java" />
+        <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/BookRequestTest.java" />
       </list>
     </option>
   </component>
@@ -976,7 +987,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/models/BookRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25157234">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
           <folding>
             <element signature="e#466#467#0" expanded="true" />
@@ -1011,6 +1022,14 @@
             <element signature="e#1681#1682#0" expanded="true" />
             <element signature="e#1726#1727#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/BookRequestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9371069">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

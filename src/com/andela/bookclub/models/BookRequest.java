@@ -6,7 +6,7 @@ public class BookRequest extends Model {
 
     // Private fields
 
-    private Book book;
+    private Book requestedBook;
 
     private Member borrower;
 
@@ -24,13 +24,12 @@ public class BookRequest extends Model {
 
     // Getters and setters
 
-
-    public Book getBook() {
-        return book;
+    public Book getRequestedBook() {
+        return requestedBook;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setRequestedBook(Book requestedBook) {
+        this.requestedBook = requestedBook;
     }
 
     public Member getBorrower() {

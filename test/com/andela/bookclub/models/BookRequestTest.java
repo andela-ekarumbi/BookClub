@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class BookRequestTest {
 
     @Test
-    public void testGetBook() throws Exception {
+    public void testGetRequestedBook() throws Exception {
 
     }
 

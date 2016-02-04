@@ -136,8 +136,13 @@ public class BookRequestTest {
         assertEquals(bookDueDate, returnByDate);
     }
 
+    @Before
+    public void beforeTestIsBookReturned() {
+        bookRequest.setBookReturned(false);
+    }
+
     @Test
     public void testIsBookReturned() throws Exception {
-
+        assertFalse(bookRequest.isBookReturned());
     }
 }

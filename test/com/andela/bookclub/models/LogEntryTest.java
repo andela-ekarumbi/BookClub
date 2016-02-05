@@ -59,10 +59,18 @@ public class LogEntryTest {
         assertNotSame(null, startTime);
         assertEquals(timeStart, startTime);
     }
+    
+    @Before
+    public void beforeTestGetTimeEnd() {
+        timeEnd = new Date();
+        logEntry.setTimeEnd(timeEnd);
+    }
 
     @Test
     public void testGetTimeEnd() throws Exception {
-
+        Date endTime = logEntry.getTimeEnd();
+        assertNotSame(null, endTime);
+        assertEquals(timeEnd, endTime);
     }
 
     @Test

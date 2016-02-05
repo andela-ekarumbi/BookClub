@@ -65,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/LogEntryTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4192872">
-              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -605,9 +605,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookRequestTest - 2016.02.04 at 13h 46m 15s.xml">
-      <configuration name="BookRequestTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookRequestTest - 2016.02.04 at 13h 51m 14s.xml">
       <configuration name="BookRequestTest" configurationId="JUnit" />
     </history-entry>
@@ -633,6 +630,9 @@
       <configuration name="LogEntryTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LogEntryTest - 2016.02.05 at 14h 58m 30s.xml">
+      <configuration name="LogEntryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogEntryTest - 2016.02.05 at 15h 01m 54s.xml">
       <configuration name="LogEntryTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1127,7 +1127,7 @@
     <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/models/LogEntryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4192872">
-          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
           <folding />
         </state>
       </provider>

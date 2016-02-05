@@ -67,9 +67,32 @@ public class LibraryMembersTest {
         assertEquals(testMember1, member1);
     }
 
+    @Before
+    public void beforeTestUpdateMemberDetails() {
+        member1Id = "12345";
+        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        testMember1.setId(member1Id);
+        libraryMembers.addNewMember(testMember1);
+    }
+
     @Test
     public void testUpdateMemberDetails() throws Exception {
+        // Prepare member object to use for update
 
+        Member updateMember = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        updateMember.setSurname("Kariuki");
+        updateMember.setFirstName("John");
+
+        // Do update
+
+        libraryMembers.updateMemberDetails(member1Id, updateMember);
+
+        // Confirm update
+
+        Member confirmMember = libraryMembers.getMemberById(member1Id);
+
+        assertEquals("Kariuki", confirmMember.getSurname());
+        assertEquals("John", confirmMember.getFirstName());
     }
 
     @Test

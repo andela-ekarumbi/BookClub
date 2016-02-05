@@ -57,8 +57,8 @@
       <file leaf-file-name="LibraryMembersTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryMembersTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6289308">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6540881">
+              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding>
                 <element signature="e#569#570#0" expanded="true" />
                 <element signature="e#653#654#0" expanded="true" />
@@ -606,11 +606,11 @@
     <history-entry file="LibraryMembersTest - 2016.02.05 at 16h 44m 15s.xml">
       <configuration name="LibraryMembersTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LibraryMembersTest - 2016.02.05 at 17h 12m 42s.xml">
+      <configuration name="LibraryMembersTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="LibraryMembersTest_testAddNewMember - 2016.02.05 at 16h 00m 05s.xml">
       <configuration name="LibraryMembersTest.testAddNewMember" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LogEntryTest - 2016.02.05 at 14h 58m 30s.xml">
-      <configuration name="LogEntryTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LogEntryTest - 2016.02.05 at 15h 01m 54s.xml">
       <configuration name="LogEntryTest" configurationId="JUnit" />
@@ -1029,8 +1029,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryMembersTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6289308">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6540881">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
             <element signature="e#569#570#0" expanded="true" />
             <element signature="e#653#654#0" expanded="true" />

@@ -30,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LibraryMembers.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LibraryMembers.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryMembers.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7862069">
+            <state vertical-scroll-proportion="0.0">
               <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,13 +54,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LibraryMembersTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryMembersTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -90,6 +100,7 @@
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/models/LogEntry.java" />
         <option value="$PROJECT_DIR$/test/com/andela/bookclub/models/LogEntryTest.java" />
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryMembers.java" />
+        <option value="$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryMembersTest.java" />
       </list>
     </option>
   </component>
@@ -220,6 +231,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.andela.bookclub.operations" />
       <recent name="com.andela.bookclub.models" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -992,7 +1004,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryMembers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7862069">
+        <state vertical-scroll-proportion="0.0">
           <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1009,6 +1021,14 @@
             <element signature="e#715#716#0" expanded="true" />
             <element signature="e#743#744#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryMembersTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

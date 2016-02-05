@@ -47,9 +47,17 @@ public class LogEntryTest {
         assertEquals("Lorem ipsum dolor sit amet", entryDescription);
     }
 
+    @Before
+    public void beforeTestGetTimeStart() {
+        timeStart = new Date();
+        logEntry.setTimeStart(timeStart);
+    }
+
     @Test
     public void testGetTimeStart() throws Exception {
-
+        Date startTime = logEntry.getTimeStart();
+        assertNotSame(null, startTime);
+        assertEquals(timeStart, startTime);
     }
 
     @Test

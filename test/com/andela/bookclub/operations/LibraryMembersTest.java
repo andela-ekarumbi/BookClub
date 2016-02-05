@@ -21,6 +21,8 @@ public class LibraryMembersTest {
 
     private Member testMember3;
 
+    private String member1Id;
+
     // Test methods
 
     @Before
@@ -50,9 +52,19 @@ public class LibraryMembersTest {
         assertEquals(5, members.size());
     }
 
+    @Before
+    public void beforeTestGetMemberById() {
+        member1Id = "12345";
+        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        testMember1.setId(member1Id);
+        libraryMembers.addNewMember(testMember1);
+    }
+
     @Test
     public void testGetMemberById() throws Exception {
-
+        Member member1 = libraryMembers.getMemberById(member1Id);
+        assertNotSame(null, member1);
+        assertEquals(testMember1, member1);
     }
 
     @Test

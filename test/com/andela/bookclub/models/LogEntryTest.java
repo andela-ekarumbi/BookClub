@@ -59,7 +59,7 @@ public class LogEntryTest {
         assertNotSame(null, startTime);
         assertEquals(timeStart, startTime);
     }
-    
+
     @Before
     public void beforeTestGetTimeEnd() {
         timeEnd = new Date();
@@ -73,8 +73,17 @@ public class LogEntryTest {
         assertEquals(timeEnd, endTime);
     }
 
+    @Before
+    public void beforeTestGetLoggedBy() {
+        staffMember = new StaffMember();
+        logEntry.setLoggedBy(staffMember);
+    }
+
     @Test
     public void testGetLoggedBy() throws Exception {
-
+        StaffMember member = logEntry.getLoggedBy();
+        assertNotSame(null, member);
+        assertEquals(staffMember, member);
     }
 }
+

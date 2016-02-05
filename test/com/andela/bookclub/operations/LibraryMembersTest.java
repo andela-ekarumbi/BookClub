@@ -23,6 +23,15 @@ public class LibraryMembersTest {
 
     private String member1Id;
 
+    // Utility methods
+
+    private void addMember1() {
+        member1Id = "12345";
+        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        testMember1.setId(member1Id);
+        libraryMembers.addNewMember(testMember1);
+    }
+
     // Test methods
 
     @Before
@@ -54,10 +63,7 @@ public class LibraryMembersTest {
 
     @Before
     public void beforeTestGetMemberById() {
-        member1Id = "12345";
-        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        testMember1.setId(member1Id);
-        libraryMembers.addNewMember(testMember1);
+        addMember1();
     }
 
     @Test
@@ -69,10 +75,7 @@ public class LibraryMembersTest {
 
     @Before
     public void beforeTestUpdateMemberDetails() {
-        member1Id = "12345";
-        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        testMember1.setId(member1Id);
-        libraryMembers.addNewMember(testMember1);
+        addMember1();
     }
 
     @Test
@@ -95,8 +98,21 @@ public class LibraryMembersTest {
         assertEquals("John", confirmMember.getFirstName());
     }
 
+    @Before
+    public void beforeTestDeleteMember() {
+        addMember1();
+    }
+
     @Test
     public void testDeleteMember() throws Exception {
 
+        // Exercise the deletion
+
+        libraryMembers.deleteMember(member1Id);
+
+        // Confirm deletion
+
+        Member deletedMember = libraryMembers.getMemberById(member1Id);
+        assertEquals(null, deletedMember);
     }
 }

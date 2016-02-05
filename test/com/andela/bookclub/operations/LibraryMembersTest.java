@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class LibraryMembersTest {
@@ -17,7 +19,7 @@ public class LibraryMembersTest {
 
     private Member testMember2;
 
-    private Member getTestMember3;
+    private Member testMember3;
 
     // Test methods
 
@@ -31,9 +33,21 @@ public class LibraryMembersTest {
         assertTrue(libraryMembers.addNewMember(testMember1));
     }
 
+    @Before
+    public void beforeTestGetAllMembers() {
+
+        // Add five member objects to libraryMembers
+
+        for (int i = 0; i < 5; i++) {
+            libraryMembers.addNewMember(Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS));
+        }
+    }
+
     @Test
     public void testGetAllMembers() throws Exception {
-
+        List<Member> members = libraryMembers.getAllMembers();
+        assertNotSame(null, members);
+        assertEquals(5, members.size());
     }
 
     @Test

@@ -64,13 +64,16 @@ public class LibraryMembersTest {
     @Before
     public void beforeTestGetMemberById() {
         addMember1();
+        Member m = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        m.setId("678910");
+        libraryMembers.addNewMember(m);
     }
 
     @Test
     public void testGetMemberById() throws Exception {
         Member member1 = libraryMembers.getMemberById(member1Id);
         assertNotSame(null, member1);
-        assertEquals(testMember1, member1);
+        assertEquals(testMember1.getId(), member1.getId());
     }
 
     @Before

@@ -1,6 +1,7 @@
 package com.andela.bookclub.operations;
 
 import com.andela.bookclub.models.Member;
+import com.andela.bookclub.models.Model;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -34,20 +35,50 @@ public class LibraryMembers {
     }
 
     public Member getMemberById(String id) {
+        return memberSearch(id);
+    }
 
-        // First sort the members list using member's id
+    private Member memberSearch(String id) {
 
-        Collections.sort(members, new Comparator<Member>() {
-            @Override
-            public int compare(Member o1, Member o2) {
-                return o1.getId().compareTo(o2.getId());
+        // First sort the members list
+
+        Collections.sort(members);
+
+        // Then do a binary search for the member with the given id
+
+        int start = 0;
+
+        int length = members.size();
+
+        int end = length - 1;
+
+        while (start <= end) {
+
+            if (members.get(start).getId().equals(id)) {
+                return members.get(start);
             }
-        });
 
-        // Then do a binary search on the members list using
-        // the given id
+            if (members.get(end).getId().equals(id)) {
+                return members.get(end);
+            }
 
-        int foundIndex = Collections.binarySearch()
+            int mid = Math.floorDiv((start + end), 2);
+
+            if (members.get(mid).getId().equals(id)) {
+                return members.get(mid);
+            } else {
+
+                if (members.get(mid).getId().compareTo(id) < 0) {
+                    end = mid - 1;
+                    start += 1;
+                } else {
+                    start = mid + 1;
+                    end -= 1;
+                }
+            }
+        }
+
+        return null;
     }
 
     public boolean updateMemberDetails(String id, Member member) {

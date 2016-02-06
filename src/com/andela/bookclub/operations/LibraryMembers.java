@@ -20,11 +20,15 @@ public class LibraryMembers {
     // Public methods
 
     public boolean addNewMember(Member newMember) {
-        return false;
+        try {
+            return members.add(newMember);
+        } catch (Exception exception) {
+            return false;
+        }
     }
 
     public List<Member> getAllMembers() {
-        return null;
+        return members;
     }
 
     public Member getMemberById(String id) {

@@ -36,7 +36,7 @@ public class LibraryMembersTest {
 
     @Before
     public void beforeTestAddNewMember() {
-        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        addMember1();
     }
 
     @Test

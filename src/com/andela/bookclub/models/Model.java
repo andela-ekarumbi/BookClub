@@ -3,7 +3,7 @@ package com.andela.bookclub.models;
 /*
 *  The superclass for all model classes
 */
-public class Model {
+public  abstract class Model implements Comparable {
     private String id;
 
     public String getId() {
@@ -12,5 +12,9 @@ public class Model {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public int compareTo(Model o) {
+        return (this.getId()).compareTo(o.getId());
     }
 }

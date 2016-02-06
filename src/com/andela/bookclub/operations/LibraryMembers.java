@@ -3,7 +3,9 @@ package com.andela.bookclub.operations;
 import com.andela.bookclub.models.Member;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Collections;
 
 public class LibraryMembers {
 
@@ -32,7 +34,20 @@ public class LibraryMembers {
     }
 
     public Member getMemberById(String id) {
-        return  null;
+
+        // First sort the members list using member's id
+
+        Collections.sort(members, new Comparator<Member>() {
+            @Override
+            public int compare(Member o1, Member o2) {
+                return o1.getId().compareTo(o2.getId());
+            }
+        });
+
+        // Then do a binary search on the members list using
+        // the given id
+
+        int foundIndex = Collections.binarySearch()
     }
 
     public boolean updateMemberDetails(String id, Member member) {

@@ -58,7 +58,7 @@ public class LibraryMembersTest {
     public void testGetAllMembers() throws Exception {
         List<Member> members = libraryMembers.getAllMembers();
         assertNotSame(null, members);
-        assertEquals(5, members.size());
+        assertTrue(members.size() >= 5);
     }
 
     @Before

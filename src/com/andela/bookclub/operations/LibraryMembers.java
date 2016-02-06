@@ -3,6 +3,7 @@ package com.andela.bookclub.operations;
 import com.andela.bookclub.models.Member;
 import com.andela.bookclub.models.Model;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -35,10 +36,11 @@ public class LibraryMembers {
     }
 
     public Member getMemberById(String id) {
-        return memberSearch(id);
+        int foundPosition = memberSearch(id);
+        return members.get(foundPosition);
     }
 
-    private Member memberSearch(String id) {
+    private int memberSearch(String id) {
 
         // First sort the members list
 
@@ -50,22 +52,30 @@ public class LibraryMembers {
 
         int length = members.size();
 
+        if (length == 1) {
+            if (members.get(0).getId().equals(id)) {
+                return 0;
+            } else {
+                return  -1;
+            }
+        }
+
         int end = length - 1;
 
         while (start <= end) {
 
             if (members.get(start).getId().equals(id)) {
-                return members.get(start);
+                return start;
             }
 
             if (members.get(end).getId().equals(id)) {
-                return members.get(end);
+                return end;
             }
 
             int mid = Math.floorDiv((start + end), 2);
 
             if (members.get(mid).getId().equals(id)) {
-                return members.get(mid);
+                return mid;
             } else {
 
                 if (members.get(mid).getId().compareTo(id) < 0) {
@@ -78,11 +88,59 @@ public class LibraryMembers {
             }
         }
 
-        return null;
+        return -1;
     }
 
     public boolean updateMemberDetails(String id, Member member) {
-        return false;
+
+        // We will (attempt to) use type reflection to detect changes in the
+        // incoming object and apply them to the existing object.
+
+        try {
+            Member existingMember = getMemberById(id);
+
+            // Proceed only if there is a member with the given id
+
+            if (existingMember != null) {
+
+                // Get Class object for Member
+
+                Class memberClass = Member.class;
+
+                // Get array of Field objects for private fields in memberClass
+
+                Field[] memberFields = memberClass.getDeclaredFields();
+
+                // Iterate through field array
+
+                for (Field field: memberFields) {
+
+                    // Make private field acessible
+
+                    field.setAccessible(true);
+
+                    // Proceed only if the value of this field in the incoming
+                    // object is not null
+
+                    if (field.get(member) != null) {
+
+                        // Obtain the value of this field in the incoming object
+
+                        Object incomingValue = field.get(member);
+
+                        // Set the value of this field in the existing object to the new
+                        // value
+
+                        field.set(existingMember, incomingValue);
+                    }
+                }
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception exception) {
+            return false;
+        }
     }
 
     public boolean deleteMember(String id) {

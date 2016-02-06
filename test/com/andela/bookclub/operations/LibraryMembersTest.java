@@ -91,12 +91,13 @@ public class LibraryMembersTest {
 
         // Do update
 
-        libraryMembers.updateMemberDetails(member1Id, updateMember);
+        assertTrue(libraryMembers.updateMemberDetails(member1Id, updateMember));
 
         // Confirm update
 
         Member confirmMember = libraryMembers.getMemberById(member1Id);
 
+        assertEquals(member1Id, confirmMember.getId());
         assertEquals("Kariuki", confirmMember.getSurname());
         assertEquals("John", confirmMember.getFirstName());
     }

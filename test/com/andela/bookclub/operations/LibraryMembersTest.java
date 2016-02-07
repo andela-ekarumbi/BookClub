@@ -1,6 +1,7 @@
 package com.andela.bookclub.operations;
 
 import com.andela.bookclub.models.Member;
+import com.andela.bookclub.models.StudentMember;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -13,44 +14,36 @@ public class LibraryMembersTest {
 
     // Private variables to use in testing
 
-    private LibraryMembers libraryMembers = new LibraryMembers();
+    private LibraryMembers libraryMembers;
+
+    private LibraryMembers libraryMembers2;
+
+    private LibraryMembers libraryMembers3;
 
     private Member testMember1;
 
-    private Member testMember2;
-
-    private Member testMember3;
-
     private String member1Id;
 
-    // Utility methods
-
-    private void addMember1() {
-        member1Id = "12345";
-        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        testMember1.setId(member1Id);
-        libraryMembers.addNewMember(testMember1);
-    }
+    private String deleteMemberId;
 
     // Test methods
 
-    @Before
-    public void beforeTestAddNewMember() {
-        addMember1();
-    }
-
     @Test
     public void testAddNewMember() throws Exception {
+        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
         assertTrue(libraryMembers.addNewMember(testMember1));
     }
 
     @Before
     public void beforeTestGetAllMembers() {
+        libraryMembers = new LibraryMembers();
 
         // Add five member objects to libraryMembers
 
         for (int i = 0; i < 5; i++) {
-            libraryMembers.addNewMember(Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS));
+            Member addMember = new StudentMember();
+            addMember.setId(Integer.toString(i));
+            libraryMembers.addNewMember(addMember);
         }
     }
 
@@ -58,27 +51,31 @@ public class LibraryMembersTest {
     public void testGetAllMembers() throws Exception {
         List<Member> members = libraryMembers.getAllMembers();
         assertNotSame(null, members);
-        assertTrue(members.size() >= 5);
+        assertEquals(5, members.size());
     }
 
     @Before
     public void beforeTestGetMemberById() {
-        addMember1();
-        Member m = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        m.setId("678910");
-        libraryMembers.addNewMember(m);
+        libraryMembers2 = new LibraryMembers();
+        member1Id = "123457";
+        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        testMember1.setId(member1Id);
+        libraryMembers2.addNewMember(testMember1);
     }
 
     @Test
     public void testGetMemberById() throws Exception {
-        Member member1 = libraryMembers.getMemberById(member1Id);
+        Member member1 = libraryMembers2.getMemberById(member1Id);
         assertNotSame(null, member1);
         assertEquals(testMember1.getId(), member1.getId());
     }
 
     @Before
     public void beforeTestUpdateMemberDetails() {
-        addMember1();
+        libraryMembers3 = new LibraryMembers();
+        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        testMember1.setId("6789");
+        libraryMembers3.addNewMember(testMember1);
     }
 
     @Test
@@ -91,32 +88,34 @@ public class LibraryMembersTest {
 
         // Do update
 
-        assertTrue(libraryMembers.updateMemberDetails(member1Id, updateMember));
+        assertTrue(libraryMembers3.updateMemberDetails("6789", updateMember));
 
         // Confirm update
 
-        Member confirmMember = libraryMembers.getMemberById(member1Id);
+        Member confirmMember = libraryMembers3.getMemberById("6789");
 
-        assertEquals(member1Id, confirmMember.getId());
+        assertEquals("6789", confirmMember.getId());
         assertEquals("Kariuki", confirmMember.getSurname());
         assertEquals("John", confirmMember.getFirstName());
     }
 
     @Before
     public void beforeTestDeleteMember() {
-        addMember1();
+        libraryMembers = new LibraryMembers();
+        Member deleteMember = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        deleteMemberId = "delete123";
+        deleteMember.setId(deleteMemberId);
+        libraryMembers.addNewMember(deleteMember);
     }
 
     @Test
     public void testDeleteMember() throws Exception {
-
         // Exercise the deletion
 
-        libraryMembers.deleteMember(member1Id);
+        libraryMembers.deleteMember(deleteMemberId);
 
         // Confirm deletion
 
-        Member deletedMember = libraryMembers.getMemberById(member1Id);
-        assertEquals(null, deletedMember);
+        assertEquals(null, libraryMembers.getMemberById(deleteMemberId));
     }
 }

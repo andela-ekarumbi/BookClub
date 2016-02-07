@@ -1,11 +1,9 @@
 package com.andela.bookclub.operations;
 
 import com.andela.bookclub.models.Member;
-import com.andela.bookclub.models.Model;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Collections;
 
@@ -37,7 +35,12 @@ public class LibraryMembers {
 
     public Member getMemberById(String id) {
         int foundPosition = memberSearch(id);
-        return members.get(foundPosition);
+
+        if (foundPosition == -1) {
+            return null;
+        } else {
+            return members.get(foundPosition);
+        }
     }
 
     private int memberSearch(String id) {
@@ -51,6 +54,10 @@ public class LibraryMembers {
         int start = 0;
 
         int length = members.size();
+
+        if (length == 0) {
+            return  -1;
+        }
 
         if (length == 1) {
             if (members.get(0).getId().equals(id)) {
@@ -144,6 +151,21 @@ public class LibraryMembers {
     }
 
     public boolean deleteMember(String id) {
-        return false;
+        try {
+            // Obtain the index of the object to be deleted
+
+            int deleteIndex = memberSearch(id);
+
+            // Delete only if index is valid
+
+            if (deleteIndex == -1) {
+                return false;
+            } else {
+                members.remove(deleteIndex);
+                return true;
+            }
+        } catch (Exception exception){
+            return false;
+        }
     }
 }

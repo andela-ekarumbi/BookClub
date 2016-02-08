@@ -33,6 +33,8 @@ public class LibraryCatalogueTest {
 
     private String testIsbn2;
 
+    private String testIsbn3;
+
     // Utility methods
 
     private String generateIsbn() {
@@ -77,8 +79,8 @@ public class LibraryCatalogueTest {
     @Before
     public void beforeTestGetBookByIsbn() {
         testBook2 = new Book();
-        testIsbn2 = generateIsbn();
-        testBook2.setIsbn(testIsbn2);
+        testIsbn1 = generateIsbn();
+        testBook2.setIsbn(testIsbn1);
 
         catalogue3 = new LibraryCatalogue();
         catalogue3.addNewBook(testBook2);
@@ -86,9 +88,9 @@ public class LibraryCatalogueTest {
 
     @Test
     public void testGetBookByIsbn() throws Exception {
-        Book book = catalogue3.getBookByIsbn(testIsbn2);
+        Book book = catalogue3.getBookByIsbn(testIsbn1);
         assertNotSame(null, book);
-        assertEquals(testIsbn2, book.getIsbn());
+        assertEquals(testIsbn1, book.getIsbn());
     }
 
     @Before
@@ -115,7 +117,7 @@ public class LibraryCatalogueTest {
 
         // Exercise update
 
-        catalogue4.updateBookDetails(testIsbn2, updateBook);
+        assertTrue(catalogue4.updateBookDetails(testIsbn2, updateBook));
 
         // Confirm update
 
@@ -124,8 +126,25 @@ public class LibraryCatalogueTest {
         assertEquals("Eston Karumbi", changedBook.getAuthorName());
     }
 
+    @Before
+    public void beforeTestDeleteBook() {
+        Book deleteBook = new Book();
+        testIsbn3 = generateIsbn();
+        deleteBook.setIsbn(testIsbn3);
+
+        catalogue5 = new LibraryCatalogue();
+        catalogue5.addNewBook(deleteBook);
+    }
+
     @Test
     public void testDeleteBook() throws Exception {
+        // Exercise deletion
 
+        assertTrue(catalogue5.deleteBook(testIsbn3));
+
+        // Confirm deletion
+
+        Book confirmBook = catalogue5.getBookByIsbn(testIsbn3);
+        assertEquals(null, confirmBook);
     }
 }

@@ -20,11 +20,15 @@ public class LibraryCatalogue {
     // Public methods
 
     public boolean addNewBook(Book book) {
-        return false;
+        try {
+            return books.add(book);
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public List<Book> getAllBooks() {
-        return null;
+        return books;
     }
 
     public Book getBookByIsbn(String isbn) {

@@ -5,6 +5,8 @@ import com.andela.bookclub.models.Book;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class LibraryCatalogueTest {
@@ -47,6 +49,25 @@ public class LibraryCatalogueTest {
     @Test
     public void testAddNewBook() throws Exception {
         assertTrue(catalogue1.addNewBook(testBook1));
+    }
+
+    @Before
+    public void beforeTestGetAllBooks() {
+        catalogue2 = new LibraryCatalogue();
+
+        // Add five books
+
+        for (int i = 0; i < 5; i++) {
+            catalogue2.addNewBook(new Book());
+        }
+
+    }
+
+    @Test
+    public void testGetAllBooks() {
+        List<Book> books = catalogue2.getAllBooks();
+        assertNotSame(null, books);
+        assertEquals(5, books.size());
     }
 
     @Test

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce2c1c30-f885-428d-bc51-14fe3dcb0a5e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryCatalogue.java" afterPath="$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryCatalogue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryCatalogueTest.java" afterPath="$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryCatalogueTest.java" />
     </list>
     <ignored path="BookClub.iws" />
@@ -33,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LibraryCatalogue.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LibraryCatalogue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryCatalogue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.537931">
+            <state vertical-scroll-proportion="0.0">
               <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -57,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibraryCatalogueTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LibraryCatalogueTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryCatalogueTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.6689655">
+              <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,8 +109,8 @@
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/operations/MembersTest.java" />
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryMembers.java" />
         <option value="$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryMembersTest.java" />
-        <option value="$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryCatalogueTest.java" />
         <option value="$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryCatalogue.java" />
+        <option value="$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryCatalogueTest.java" />
       </list>
     </option>
   </component>
@@ -1054,19 +1053,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryCatalogueTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/andela/bookclub/operations/LibraryCatalogue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.537931">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1082,6 +1071,16 @@
             <element signature="e#642#643#0" expanded="true" />
             <element signature="e#686#687#0" expanded="true" />
             <element signature="e#714#715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/com/andela/bookclub/operations/LibraryCatalogueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6689655">
+          <caret line="68" column="35" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

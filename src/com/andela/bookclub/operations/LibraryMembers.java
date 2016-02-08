@@ -44,58 +44,7 @@ public class LibraryMembers {
     }
 
     private int memberSearch(String id) {
-
-        // First sort the members list
-
-        Collections.sort(members);
-
-        // Then do a binary search for the member with the given id
-
-        int start = 0;
-
-        int length = members.size();
-
-        if (length == 0) {
-            return  -1;
-        }
-
-        if (length == 1) {
-            if (members.get(0).getId().equals(id)) {
-                return 0;
-            } else {
-                return  -1;
-            }
-        }
-
-        int end = length - 1;
-
-        while (start <= end) {
-
-            if (members.get(start).getId().equals(id)) {
-                return start;
-            }
-
-            if (members.get(end).getId().equals(id)) {
-                return end;
-            }
-
-            int mid = Math.floorDiv((start + end), 2);
-
-            if (members.get(mid).getId().equals(id)) {
-                return mid;
-            } else {
-
-                if (members.get(mid).getId().compareTo(id) < 0) {
-                    end = mid - 1;
-                    start += 1;
-                } else {
-                    start = mid + 1;
-                    end -= 1;
-                }
-            }
-        }
-
-        return -1;
+        return Utility.searchById(members, id);
     }
 
     public boolean updateMemberDetails(String id, Member member) {

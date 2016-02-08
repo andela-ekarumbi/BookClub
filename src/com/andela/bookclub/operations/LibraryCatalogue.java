@@ -23,6 +23,14 @@ public class LibraryCatalogue {
         return false;
     }
 
+    public List<Book> getAllBooks() {
+        return null;
+    }
+
+    public Book getBookByIsbn(String isbn) {
+        return null;
+    }
+
     public boolean updateBookDetails(String id, Book book) {
         return false;
     }
@@ -31,7 +39,5 @@ public class LibraryCatalogue {
         return false;
     }
 
-    public Book getBookByIsbn(String isbn) {
-        return null;
-    }
+
 }

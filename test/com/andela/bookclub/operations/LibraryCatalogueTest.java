@@ -25,6 +25,8 @@ public class LibraryCatalogueTest {
 
     private Book testBook3;
 
+    private String testIsbn1;
+
     // Utility methods
 
     private String generateId() {
@@ -48,17 +50,28 @@ public class LibraryCatalogueTest {
     }
 
     @Test
+    public void testGetBookByIsbn() throws Exception {
+
+    }
+
+    @Before
+    public void beforeTestUpdateBookDetails() {
+        testBook2 = new Book();
+        testIsbn1 = generateId();
+        testBook2.setIsbn(testIsbn1);
+        testBook2.setSynopsis("Lorem ipsum dolor sit amet");
+        testBook2.setTitle("Lorem Ipsum");
+        testBook2.setAuthorName("Unknown Latin Guy");
+
+    }
+
+    @Test
     public void testUpdateBookDetails() throws Exception {
 
     }
 
     @Test
     public void testDeleteBook() throws Exception {
-
-    }
-
-    @Test
-    public void testGetBookByIsbn() throws Exception {
 
     }
 }

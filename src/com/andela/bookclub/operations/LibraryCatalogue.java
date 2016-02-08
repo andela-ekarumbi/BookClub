@@ -151,7 +151,14 @@ public class LibraryCatalogue {
     }
 
     public boolean deleteBook(String isbn) {
-        return false;
+        int deleteIndex = searchBookByIsbn(isbn);
+
+        if (deleteIndex == -1) {
+            return false;
+        } else {
+            books.remove(deleteIndex);
+            return true;
+        }
     }
 
 

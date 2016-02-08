@@ -5,7 +5,9 @@ import com.andela.bookclub.models.BookRequest;
 import com.andela.bookclub.models.Member;
 import com.andela.bookclub.models.StaffMember;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class Librarian {
@@ -14,7 +16,9 @@ public class Librarian {
 
     private LibraryCatalogue catalogue;
 
-    private Map<Book, Queue<BookRequest>> bookQueueMap;
+    private Map<Book, Queue<BookRequest>> staffBookQueueMap;
+
+    private Map<Book, Queue<BookRequest>> studentBookQueueMap;
 
     private StaffMember staffOnDuty;
 
@@ -22,6 +26,8 @@ public class Librarian {
 
     public Librarian(StaffMember staffOnDuty) {
         this.staffOnDuty = staffOnDuty;
+        this.staffBookQueueMap = new HashMap<>();
+        this.studentBookQueueMap = new HashMap<>();
     }
 
     // Public methods

@@ -76,11 +76,12 @@ public class LibraryCatalogueTest {
 
     @Before
     public void beforeTestGetBookByIsbn() {
-        catalogue3 = new LibraryCatalogue();
         testBook2 = new Book();
         testIsbn2 = generateIsbn();
         testBook2.setIsbn(testIsbn2);
-        catalogue3.addNewBook(testBook2)
+
+        catalogue3 = new LibraryCatalogue();
+        catalogue3.addNewBook(testBook2);
     }
 
     @Test
@@ -99,11 +100,28 @@ public class LibraryCatalogueTest {
         testBook3.setTitle("Lorem Ipsum");
         testBook3.setAuthorName("Unknown Latin Guy");
 
+        catalogue4 = new LibraryCatalogue();
+        catalogue4.addNewBook(testBook3);
     }
 
     @Test
     public void testUpdateBookDetails() throws Exception {
+        // Create object to be used for update
 
+        Book updateBook = new Book();
+        updateBook.setSynopsis("Hapa Kenya Hakuna Matata.");
+        updateBook.setTitle("Karibu Kenya");
+        updateBook.setAuthorName("Eston Karumbi");
+
+        // Exercise update
+
+        catalogue4.updateBookDetails(testIsbn2, updateBook);
+
+        // Confirm update
+
+        Book changedBook = catalogue4.getBookByIsbn(testIsbn2);
+        assertEquals("Hapa Kenya Hakuna Matata.", changedBook.getSynopsis());
+        assertEquals("Eston Karumbi", changedBook.getAuthorName());
     }
 
     @Test

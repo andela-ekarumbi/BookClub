@@ -31,11 +31,11 @@ public class LibraryCatalogue {
         return null;
     }
 
-    public boolean updateBookDetails(String id, Book book) {
+    public boolean updateBookDetails(String isbn, Book book) {
         return false;
     }
 
-    public boolean deleteBook(String id) {
+    public boolean deleteBook(String isbn) {
         return false;
     }
 

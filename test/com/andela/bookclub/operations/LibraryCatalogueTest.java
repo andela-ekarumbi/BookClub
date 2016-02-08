@@ -21,6 +21,8 @@ public class LibraryCatalogueTest {
 
     private LibraryCatalogue catalogue4;
 
+    private LibraryCatalogue catalogue5;
+
     private Book testBook1;
 
     private Book testBook2;
@@ -29,10 +31,12 @@ public class LibraryCatalogueTest {
 
     private String testIsbn1;
 
+    private String testIsbn2;
+
     // Utility methods
 
-    private String generateId() {
-        double randomId = Math.random() * 10000;
+    private String generateIsbn() {
+        double randomId = Math.random() * 10000000;
 
         return Double.toString(randomId);
     }
@@ -43,7 +47,7 @@ public class LibraryCatalogueTest {
     public  void beforeTestAddNewBook() {
         catalogue1 = new LibraryCatalogue();
         testBook1 = new Book();
-        testBook1.setId(generateId());
+        testBook1.setIsbn(generateIsbn());
     }
 
     @Test
@@ -70,19 +74,30 @@ public class LibraryCatalogueTest {
         assertEquals(5, books.size());
     }
 
+    @Before
+    public void beforeTestGetBookByIsbn() {
+        catalogue3 = new LibraryCatalogue();
+        testBook2 = new Book();
+        testIsbn2 = generateIsbn();
+        testBook2.setIsbn(testIsbn2);
+        catalogue3.addNewBook(testBook2)
+    }
+
     @Test
     public void testGetBookByIsbn() throws Exception {
-
+        Book book = catalogue3.getBookByIsbn(testIsbn2);
+        assertNotSame(null, book);
+        assertEquals(testIsbn2, book.getIsbn());
     }
 
     @Before
     public void beforeTestUpdateBookDetails() {
-        testBook2 = new Book();
-        testIsbn1 = generateId();
-        testBook2.setIsbn(testIsbn1);
-        testBook2.setSynopsis("Lorem ipsum dolor sit amet");
-        testBook2.setTitle("Lorem Ipsum");
-        testBook2.setAuthorName("Unknown Latin Guy");
+        testBook3 = new Book();
+        testIsbn2 = generateIsbn();
+        testBook3.setIsbn(testIsbn2);
+        testBook3.setSynopsis("Lorem ipsum dolor sit amet");
+        testBook3.setTitle("Lorem Ipsum");
+        testBook3.setAuthorName("Unknown Latin Guy");
 
     }
 

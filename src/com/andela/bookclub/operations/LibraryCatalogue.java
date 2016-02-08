@@ -2,6 +2,7 @@ package com.andela.bookclub.operations;
 
 import com.andela.bookclub.models.Book;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -97,7 +98,56 @@ public class LibraryCatalogue {
     }
 
     public boolean updateBookDetails(String isbn, Book book) {
-        return false;
+
+        // We will (attempt to) use type reflection to detect changes in the
+        // incoming object and apply them to the existing object.
+
+        try {
+            Book existingBook = getBookByIsbn(isbn);
+
+            // Proceed only if there is a book with the given id
+
+            if (existingBook != null) {
+
+                // Get Class object
+
+                Class bookClass = Book.class;
+
+                // Get array of Field objects for private fields in memberClass
+
+                Field[] bookFields = bookClass.getDeclaredFields();
+
+                // Iterate through field array
+
+                for (Field field: bookFields) {
+
+                    // Make private field acessible
+
+                    field.setAccessible(true);
+
+                    // Proceed only if the value of this field in the incoming
+                    // object is not null
+
+                    if (field.get(book) != null) {
+
+                        // Obtain the value of this field in the incoming object
+
+                        Object incomingValue = field.get(book);
+
+                        // Set the value of this field in the existing object to the new
+                        // value
+
+                        field.set(existingBook, incomingValue);
+                    }
+                }
+                return true;
+
+            } else {
+                return false;
+            }
+        } catch (Exception exception) {
+            return false;
+        }
     }
 
     public boolean deleteBook(String isbn) {

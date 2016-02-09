@@ -9,17 +9,17 @@ import java.util.Collections;
 
 public class LibraryMembers {
 
-    // Private variables
-
     private List<Member> members;
-
-    // Constructors
 
     public LibraryMembers() {
         this.members = new ArrayList<>();
     }
 
-    // Public methods
+    /**
+     * Adds a new member to the members collection
+     * @param newMember The member to be added.
+     * @return true for a successful operation, false otherwise.
+     * */
 
     public boolean addNewMember(Member newMember) {
         try {
@@ -29,9 +29,20 @@ public class LibraryMembers {
         }
     }
 
+    /**
+     * Returns a list of all the members in the collection.
+     * @return A List object containing all the members in the collection.
+     * */
+
     public List<Member> getAllMembers() {
         return members;
     }
+
+    /**
+     * Returns the member with the given id.
+     * @param id The id of the member to be retrieved.
+     * @return A Member object if found, or null otherwise.
+     * */
 
     public Member getMemberById(String id) {
         int foundPosition = memberSearch(id);
@@ -47,51 +58,36 @@ public class LibraryMembers {
         return Utility.searchById(members, id);
     }
 
-    public boolean updateMemberDetails(String id, Member member) {
+    /**
+     * Updates the member with the given id, using the details in the given object.
+     * @param id The id of the member to be updated.
+     * @param member The Member object containing the update details.
+     * @return true for a successful operation, false otherwise.
+     * */
 
-        // We will (attempt to) use type reflection to detect changes in the
-        // incoming object and apply them to the existing object.
+    public boolean updateMemberDetails(String id, Member member) {
 
         try {
             Member existingMember = getMemberById(id);
 
-            // Proceed only if there is a member with the given id
-
             if (existingMember != null) {
-
-                // Get Class object for Member
 
                 Class memberClass = Member.class;
 
-                // Get array of Field objects for private fields in memberClass
-
                 Field[] memberFields = memberClass.getDeclaredFields();
-
-                // Iterate through field array
 
                 for (Field field: memberFields) {
 
-                    // Make private field acessible
-
                     field.setAccessible(true);
-
-                    // Proceed only if the value of this field in the incoming
-                    // object is not null
 
                     if (field.get(member) != null) {
 
-                        // Obtain the value of this field in the incoming object
-
                         Object incomingValue = field.get(member);
-
-                        // Set the value of this field in the existing object to the new
-                        // value
 
                         field.set(existingMember, incomingValue);
                     }
                 }
                 return true;
-
             } else {
                 return false;
             }
@@ -100,13 +96,16 @@ public class LibraryMembers {
         }
     }
 
+    /**
+     * Deletes the member with the given id.
+     * @param id The id of the member to be deleted.
+     * @return true for a successful operation, false otherwise.
+     * */
+
     public boolean deleteMember(String id) {
         try {
-            // Obtain the index of the object to be deleted
 
             int deleteIndex = memberSearch(id);
-
-            // Delete only if index is valid
 
             if (deleteIndex == -1) {
                 return false;

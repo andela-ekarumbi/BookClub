@@ -11,13 +11,7 @@ import static org.mockito.Mockito.mock;
 
 public class ModelTest {
 
-    // Stub object to use for testing abstract class
-
     Model model;
-
-    /*
-    * One test should be adequate for each getter-setter pair
-    * */
 
     @Before
     public void beforeTestGetId() {

@@ -11,7 +11,6 @@ import static org.junit.Assert.*;
 
 public class LibraryCatalogueTest {
 
-    // Private variables to use during testing
 
     private LibraryCatalogue catalogue1;
 
@@ -35,15 +34,11 @@ public class LibraryCatalogueTest {
 
     private String testIsbn3;
 
-    // Utility methods
-
     private String generateIsbn() {
         double randomId = Math.random() * 10000000;
 
         return Double.toString(randomId);
     }
-
-    // Test methods
 
     @Before
     public  void beforeTestAddNewBook() {
@@ -60,8 +55,6 @@ public class LibraryCatalogueTest {
     @Before
     public void beforeTestGetAllBooks() {
         catalogue2 = new LibraryCatalogue();
-
-        // Add five books
 
         for (int i = 0; i < 5; i++) {
             catalogue2.addNewBook(new Book());
@@ -108,18 +101,13 @@ public class LibraryCatalogueTest {
 
     @Test
     public void testUpdateBookDetails() throws Exception {
-        // Create object to be used for update
 
         Book updateBook = new Book();
         updateBook.setSynopsis("Hapa Kenya Hakuna Matata.");
         updateBook.setTitle("Karibu Kenya");
         updateBook.setAuthorName("Eston Karumbi");
 
-        // Exercise update
-
         assertTrue(catalogue4.updateBookDetails(testIsbn2, updateBook));
-
-        // Confirm update
 
         Book changedBook = catalogue4.getBookByIsbn(testIsbn2);
         assertEquals("Hapa Kenya Hakuna Matata.", changedBook.getSynopsis());
@@ -138,11 +126,7 @@ public class LibraryCatalogueTest {
 
     @Test
     public void testDeleteBook() throws Exception {
-        // Exercise deletion
-
         assertTrue(catalogue5.deleteBook(testIsbn3));
-
-        // Confirm deletion
 
         Book confirmBook = catalogue5.getBookByIsbn(testIsbn3);
         assertEquals(null, confirmBook);

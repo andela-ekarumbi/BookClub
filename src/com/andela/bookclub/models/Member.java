@@ -2,10 +2,6 @@ package com.andela.bookclub.models;
 
 import java.util.Date;
 
-/*
-* Class Member is the superclass for all objects that will be members of the library
-* */
-
 public abstract class Member extends Model{
 
     // Private attributes

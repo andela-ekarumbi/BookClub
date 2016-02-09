@@ -7,8 +7,6 @@ import static org.junit.Assert.*;
 
 public class BookTest {
 
-    // Priivate field to use for testing
-
     private Book book = new Book();
 
     @Before

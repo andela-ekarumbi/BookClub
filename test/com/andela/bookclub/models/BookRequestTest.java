@@ -13,8 +13,6 @@ import static org.mockito.Mockito.mock;
 
 public class BookRequestTest {
 
-    // Private variables to use during testing
-
     private BookRequest bookRequest = new BookRequest();
 
     private Book bookToRequest = new Book();
@@ -28,23 +26,6 @@ public class BookRequestTest {
     private Date bookRequestGrantedDate;
 
     private Date bookDueDate;
-
-    // Utility function to add a given number of days to a date object
-
-    private Date addDaysToDate(Date startDate, int daysToAdd) {
-
-        // Create Calendar object to use for date operations
-        Calendar calendar = Calendar.getInstance();
-
-        // Assign the given Date object to our calendar
-        calendar.setTime(startDate);
-
-        // Add the specified number of days to the calendar time
-        calendar.add(Calendar.DAY_OF_MONTH, daysToAdd);
-
-        // Retrieve a Date object from the calendar and return it.
-        return calendar.getTime();
-    }
 
     @Before
     public void beforeTestGetRequestedBook() {
@@ -98,7 +79,7 @@ public class BookRequestTest {
 
     @Before
     public void beforeTestGetGrantedDate() {
-        bookRequestGrantedDate = addDaysToDate(bookRequestedDate, 3);
+        bookRequestGrantedDate = new Date();
         bookRequest.setGrantedDate(bookRequestGrantedDate);
     }
 
@@ -125,7 +106,7 @@ public class BookRequestTest {
 
     @Before
     public void beforeTestGetReturnByDate() {
-        bookDueDate = addDaysToDate(bookRequestedDate, 14);
+        bookDueDate = new Date();
         bookRequest.setReturnByDate(bookDueDate);
     }
 

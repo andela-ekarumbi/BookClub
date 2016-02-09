@@ -86,16 +86,12 @@ public class LibrarianTest {
     @Before
     public void beforeTestLendBooks() {
 
-        // Initialize books to be borrowed
-
         book2 = new Book();
         book2.setTitle("Test book 2");
         book3 = new Book();
         book3.setTitle("Test book 3");
         book4 = new Book();
         book4.setTitle("Test book 4");
-
-        // Initialize borrowers
 
         staffMember5 = new StaffMember();
         staffMember5.setId("staff5");
@@ -112,15 +108,11 @@ public class LibrarianTest {
         student3.setId("student3");
         student4 = new StudentMember();
         student4.setId("student4");
-        
-        // Initialize librarian
-        
+
         staffMember4 = new StaffMember();
         staffMember4.setId("staff4");
         librarian3 = new Librarian(staffMember4);
-        
-        // book2 will be borrowed by students only
-        
+
         BookRequest bookRequest1 = new BookRequest();
         bookRequest1.setBorrower(student5);
         bookRequest1.setRequestedBook(book2);
@@ -140,8 +132,6 @@ public class LibrarianTest {
         bookRequest4.setBorrower(student4);
         bookRequest4.setRequestedBook(book2);
         librarian3.addBookRequest(bookRequest4);
-        
-        // book3 will be borrowed by staff members only
 
         BookRequest bookRequest5 = new BookRequest();
         bookRequest5.setBorrower(staffMember5);
@@ -157,8 +147,6 @@ public class LibrarianTest {
         bookRequest7.setBorrower(staffMember3);
         bookRequest7.setRequestedBook(book3);
         librarian3.addBookRequest(bookRequest7);
-        
-        // book4 will be borrowed by a mixture of students and staff
 
         BookRequest bookRequest8 = new BookRequest();
         bookRequest8.setBorrower(student1);
@@ -184,25 +172,15 @@ public class LibrarianTest {
     @Test
     public void testLendBooks() throws Exception {
 
-        // Exercise the lending functionality
-
         Map<Book, Member> lentBooks = librarian3.lendBooks();
 
-        // Confirm the lent books map is not null
-
         assertNotNull(lentBooks);
-
-        // book2 should go to student5
 
         Member book2Recipient = lentBooks.get(book2);
         assertEquals(student5.getId(), book2Recipient.getId());
 
-        // book3 should go to staffMember5
-
         Member book3Recipient = lentBooks.get(book3);
         assertEquals(staffMember5.getId(), book3Recipient.getId());
-
-        // book4 should go to staffMember3
 
         Member book4Recipient = lentBooks.get(book4);
         assertEquals(staffMember3.getId(), book4Recipient.getId());

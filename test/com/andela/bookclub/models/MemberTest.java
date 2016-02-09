@@ -12,8 +12,6 @@ import static org.mockito.Mockito.mock;
 
 public class MemberTest {
 
-    // Private variable to use for testing
-
     Member member = mock(Member.class, Mockito.CALLS_REAL_METHODS);
 
     @Before

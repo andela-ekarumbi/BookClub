@@ -12,8 +12,6 @@ import static org.junit.Assert.*;
 
 public class LibraryMembersTest {
 
-    // Private variables to use in testing
-
     private LibraryMembers libraryMembers;
 
     private LibraryMembers libraryMembers2;
@@ -26,8 +24,6 @@ public class LibraryMembersTest {
 
     private String deleteMemberId;
 
-    // Test methods
-
     @Test
     public void testAddNewMember() throws Exception {
         testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
@@ -37,8 +33,6 @@ public class LibraryMembersTest {
     @Before
     public void beforeTestGetAllMembers() {
         libraryMembers = new LibraryMembers();
-
-        // Add five member objects to libraryMembers
 
         for (int i = 0; i < 5; i++) {
             Member addMember = new StudentMember();
@@ -80,17 +74,11 @@ public class LibraryMembersTest {
 
     @Test
     public void testUpdateMemberDetails() throws Exception {
-        // Prepare member object to use for update
-
         Member updateMember = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
         updateMember.setSurname("Kariuki");
         updateMember.setFirstName("John");
 
-        // Do update
-
         assertTrue(libraryMembers3.updateMemberDetails("6789", updateMember));
-
-        // Confirm update
 
         Member confirmMember = libraryMembers3.getMemberById("6789");
 
@@ -110,11 +98,7 @@ public class LibraryMembersTest {
 
     @Test
     public void testDeleteMember() throws Exception {
-        // Exercise the deletion
-
         libraryMembers.deleteMember(deleteMemberId);
-
-        // Confirm deletion
 
         assertEquals(null, libraryMembers.getMemberById(deleteMemberId));
     }

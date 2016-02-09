@@ -1,8 +1,6 @@
 package com.andela.bookclub.models;
 
-/*
-*  The superclass for all model classes
-*/
+
 public  abstract class Model implements Comparable<Model> {
     private String id;
 

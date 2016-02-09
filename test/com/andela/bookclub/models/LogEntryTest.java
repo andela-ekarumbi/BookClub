@@ -10,8 +10,6 @@ import static org.junit.Assert.*;
 
 public class LogEntryTest {
 
-    // Private variable(s) to use during testing
-
     private LogEntry logEntry = new LogEntry();
 
     private Member member;

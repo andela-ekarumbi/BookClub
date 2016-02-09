@@ -9,17 +9,17 @@ import java.util.List;
 
 public class LibraryCatalogue {
 
-    // Private fields
-
     private List<Book> books;
-
-    // Constructors
 
     public LibraryCatalogue() {
         this.books = new ArrayList<>();
     }
 
-    // Public methods
+    /**
+     * Adds a new book to the catalogue.
+     * @param book The book to be added.
+     * @return true for a successful operation, or false otherwise.
+     * */
 
     public boolean addNewBook(Book book) {
         try {
@@ -29,9 +29,21 @@ public class LibraryCatalogue {
         }
     }
 
+    /**
+     * Returns a list of all the books in the catalogue.
+     * @return a List object containing all the books in the catalogue.
+     * */
+
     public List<Book> getAllBooks() {
         return books;
     }
+
+    /**
+     * Does a binary search on the catalogue and returns the book with the given ISBN
+     * number.
+     * @param isbn The ISBN number to use for searching.
+     * @return A Book object if found, or null otherwise.
+     * */
 
     public Book getBookByIsbn(String isbn) {
         int foundPosition = searchBookByIsbn(isbn);
@@ -44,11 +56,8 @@ public class LibraryCatalogue {
     }
     
     private int searchBookByIsbn(String isbn) {
-        // First sort the list list
 
         Collections.sort(books);
-
-        // Then do a binary search for the member with the given id
 
         int start = 0;
 
@@ -97,45 +106,32 @@ public class LibraryCatalogue {
         return -1;
     }
 
-    public boolean updateBookDetails(String isbn, Book book) {
+    /**
+     * Updates the details of the book with the given ISBN number, using the
+     * object given to hold the incoming values.
+     * @param isbn The ISBN number of the book to be updated.
+     * @param book The Book object containing the values to be updated.
+     * @return true for a successful operation, false otherwise.
+     * */
 
-        // We will (attempt to) use type reflection to detect changes in the
-        // incoming object and apply them to the existing object.
+    public boolean updateBookDetails(String isbn, Book book) {
 
         try {
             Book existingBook = getBookByIsbn(isbn);
 
-            // Proceed only if there is a book with the given id
-
             if (existingBook != null) {
-
-                // Get Class object
 
                 Class bookClass = Book.class;
 
-                // Get array of Field objects for private fields in memberClass
-
                 Field[] bookFields = bookClass.getDeclaredFields();
-
-                // Iterate through field array
 
                 for (Field field: bookFields) {
 
-                    // Make private field acessible
-
                     field.setAccessible(true);
-
-                    // Proceed only if the value of this field in the incoming
-                    // object is not null
 
                     if (field.get(book) != null) {
 
-                        // Obtain the value of this field in the incoming object
-
                         Object incomingValue = field.get(book);
-
-                        // Set the value of this field in the existing object to the new
-                        // value
 
                         field.set(existingBook, incomingValue);
                     }
@@ -149,6 +145,12 @@ public class LibraryCatalogue {
             return false;
         }
     }
+
+    /**
+     * Deletes the book with the given ISBN from the catalogue.
+     * @param isbn The ISBN number of the book to be deleted
+     * @return true for a successful operation, false otherwise.
+     * */
 
     public boolean deleteBook(String isbn) {
         int deleteIndex = searchBookByIsbn(isbn);

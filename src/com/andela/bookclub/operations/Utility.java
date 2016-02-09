@@ -7,15 +7,18 @@ import java.util.List;
 
 public class Utility {
 
-    // Utility static search method
+    /**
+     * Takes a List of Model objects and a string id to use for search,
+     * and returns the position of the object with the given id.
+     * @param list The list to be searched.
+     * @param id The id to use for searching.
+     * @return the position of the object with the given id, or -1 if
+     * not found.
+     * */
 
     public static int searchById(List<? extends Model> list, String id) {
 
-        // First sort the list list
-
         Collections.sort(list);
-
-        // Then do a binary search for the member with the given id
 
         int start = 0;
 

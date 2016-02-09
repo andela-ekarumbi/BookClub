@@ -108,8 +108,28 @@ public class Librarian {
 
         // Iterate over the key set in lentBooks
 
-        //for ()
+        for (Book book : lentBooks.keySet()) {
 
-        return null;
+            // Check if the book has been borrowed by a staff member
+
+            if (staffBookQueueMap.containsKey(book)) {
+                assignBookToMember(staffBookQueueMap.get(book), book);
+            } else if (studentBookQueueMap.containsKey(book)) {
+                // Book has been borrowed by a student
+
+                assignBookToMember(studentBookQueueMap.get(book), book);
+            }
+        }
+
+        return lentBooks;
+    }
+
+    private void assignBookToMember(Queue<BookRequest> requests, Book book) {
+
+        if (requests.size() > 0) {
+            BookRequest topRequest = requests.remove();
+            Member member = topRequest.getBorrower();
+            lentBooks.put(book, member);
+        }
     }
 }

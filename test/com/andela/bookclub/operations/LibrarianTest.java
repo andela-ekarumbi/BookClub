@@ -27,6 +27,8 @@ public class LibrarianTest {
     
     private StaffMember staffMember4;
 
+    private StaffMember staffMember5;
+
     private StudentMember student1;
 
     private StudentMember student2;
@@ -34,6 +36,8 @@ public class LibrarianTest {
     private StudentMember student3;
 
     private StudentMember student4;
+
+    private StudentMember student5;
 
     private BookRequest request1;
 
@@ -93,15 +97,15 @@ public class LibrarianTest {
 
         // Initialize borrowers
 
-        staffMember1 = new StaffMember();
-        staffMember1.setId("staff1");
+        staffMember5 = new StaffMember();
+        staffMember5.setId("staff5");
         staffMember2 = new StaffMember();
         staffMember2.setId("staff2");
         staffMember3 = new StaffMember();
         staffMember3.setId("staff3");
 
-        student1 = new StudentMember();
-        student1.setId("student1");
+        student5 = new StudentMember();
+        student5.setId("student5");
         student2 = new StudentMember();
         student2.setId("student2");
         student3 = new StudentMember();
@@ -118,7 +122,7 @@ public class LibrarianTest {
         // book2 will be borrowed by students only
         
         BookRequest bookRequest1 = new BookRequest();
-        bookRequest1.setBorrower(student1);
+        bookRequest1.setBorrower(student5);
         bookRequest1.setRequestedBook(book2);
         librarian3.addBookRequest(bookRequest1);
 
@@ -140,7 +144,7 @@ public class LibrarianTest {
         // book3 will be borrowed by staff members only
 
         BookRequest bookRequest5 = new BookRequest();
-        bookRequest5.setBorrower(staffMember1);
+        bookRequest5.setBorrower(staffMember5);
         bookRequest5.setRequestedBook(book3);
         librarian3.addBookRequest(bookRequest5);
 
@@ -184,24 +188,24 @@ public class LibrarianTest {
 
         Map<Book, Member> lentBooks = librarian3.lendBooks();
 
-        // Confirm the lent books pam is not null
+        // Confirm the lent books map is not null
 
         assertNotNull(lentBooks);
 
-        // book2 should go to student1
+        // book2 should go to student5
 
         Member book2Recipient = lentBooks.get(book2);
-        assertEquals(student1, book2Recipient);
+        assertEquals(student5.getId(), book2Recipient.getId());
 
-        // book3 should go to staffMember1
+        // book3 should go to staffMember5
 
         Member book3Recipient = lentBooks.get(book3);
-        assertEquals(staffMember1, book3Recipient);
+        assertEquals(staffMember5.getId(), book3Recipient.getId());
 
         // book4 should go to staffMember3
 
         Member book4Recipient = lentBooks.get(book4);
-        assertEquals(staffMember3, book4Recipient);
+        assertEquals(staffMember3.getId(), book4Recipient.getId());
 
     }
 }

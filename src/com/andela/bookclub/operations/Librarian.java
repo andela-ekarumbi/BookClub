@@ -5,10 +5,7 @@ import com.andela.bookclub.models.BookRequest;
 import com.andela.bookclub.models.Member;
 import com.andela.bookclub.models.StaffMember;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class Librarian {
 
@@ -21,6 +18,8 @@ public class Librarian {
     private Map<Book, Queue<BookRequest>> studentBookQueueMap;
 
     private StaffMember staffOnDuty;
+
+    private Map<Book, Member> lentBooks;
 
     // Constructors
 
@@ -38,10 +37,79 @@ public class Librarian {
     }
 
     public boolean addBookRequest(BookRequest bookRequest) {
-        return false;
+        try {
+
+            // Get member who requested the book
+
+            Member borrower = bookRequest.getBorrower();
+
+            // Check if borrower is a staff member or
+            // a student
+
+            if (borrower instanceof StaffMember) {
+                // Add the request to the staff members' queue
+
+                return addRequestToQueue(staffBookQueueMap, bookRequest);
+            } else {
+                // Add the request to the students' queue
+
+                return addRequestToQueue(studentBookQueueMap, bookRequest);
+            }
+        } catch (Exception exception) {
+            return false;
+        }
+    }
+
+    private boolean addRequestToQueue(Map<Book, Queue<BookRequest>> bookQueueMap, BookRequest bookRequest) {
+
+        // Get the book that has been requested
+
+        Book requestedBook = bookRequest.getRequestedBook();
+
+        // Get the queue for the requested book
+
+        Queue<BookRequest> bookQueue = bookQueueMap.get(requestedBook);
+
+        // If the queue is null, create it, then add the request to the queue
+
+        if (bookQueue == null) {
+            bookQueue = new LinkedList<>();
+        }
+
+        bookQueue.add(bookRequest);
+
+        // Associate the queue with the requested book
+
+        bookQueueMap.put(requestedBook, bookQueue);
+
+        return true;
     }
 
     public Map<Book, Member> lendBooks() {
+        // Initialize the map of lent books
+
+        lentBooks = new HashMap<>();
+
+        // Iterate through the students and staff request maps and get unique
+        // object keys representing the books requested, then add them to the
+        // map of lent books as keys, to be given values later
+
+        for (Book book : staffBookQueueMap.keySet()) {
+            if (!lentBooks.containsKey(book)) {
+                lentBooks.put(book, null);
+            }
+        }
+
+        for (Book book : studentBookQueueMap.keySet()) {
+            if (!lentBooks.containsKey(book)) {
+                lentBooks.put(book, null);
+            }
+        }
+
+        // Iterate over the key set in lentBooks
+
+        //for ()
+
         return null;
     }
 }

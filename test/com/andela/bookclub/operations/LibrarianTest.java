@@ -184,6 +184,10 @@ public class LibrarianTest {
 
         Map<Book, Member> lentBooks = librarian3.lendBooks();
 
+        // Confirm the lent books pam is not null
+
+        assertNotNull(lentBooks);
+
         // book2 should go to student1
 
         Member book2Recipient = lentBooks.get(book2);

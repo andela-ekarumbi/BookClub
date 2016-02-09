@@ -28,12 +28,13 @@ public class Librarian {
         this.staffOnDuty = staffOnDuty;
         this.staffBookQueueMap = new HashMap<>();
         this.studentBookQueueMap = new HashMap<>();
+        this.catalogue = new LibraryCatalogue();
     }
 
     // Public methods
 
     public boolean registerNewBook(Book book) {
-        return false;
+        return catalogue.addNewBook(book);
     }
 
     public boolean addBookRequest(BookRequest bookRequest) {

@@ -6,7 +6,7 @@ import java.util.Date;
 * Class Member is the superclass for all objects that will be members of the library
 * */
 
-public abstract class Member extends Model {
+public abstract class Member extends Model{
 
     // Private attributes
 
@@ -102,9 +102,5 @@ public abstract class Member extends Model {
         this.joinedDate = joinedDate;
     }
 
-    // Constructors
 
-    public Member() {
-        setJoinedDate(new Date());
-    }
 }

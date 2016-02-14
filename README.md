@@ -76,7 +76,7 @@ public class BookClubTest {
 
 #### 3. Request for a book
 
-```
+```java
 package com.andela.bookclub.models;
 
 import com.andela.bookclub.models.Book;

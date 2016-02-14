@@ -11,6 +11,8 @@ public class Librarian {
 
     private LibraryCatalogue catalogue;
 
+    private LibraryMembers members;
+
     private Map<Book, Queue<BookRequest>> staffBookQueueMap;
 
     private Map<Book, Queue<BookRequest>> studentBookQueueMap;
@@ -29,6 +31,18 @@ public class Librarian {
         this.staffBookQueueMap = new HashMap<>();
         this.studentBookQueueMap = new HashMap<>();
         this.catalogue = new LibraryCatalogue();
+        this.members = new LibraryMembers();
+    }
+
+    /**
+     * Registers a new member and returns true for a successful operation,
+     * or false otherwise.
+     * @param member The member to be added
+     * @return true if successful, false otherwise
+     * */
+
+    public boolean registerNewMember(Member member) {
+        return members.addNewMember(member);
     }
 
     /**

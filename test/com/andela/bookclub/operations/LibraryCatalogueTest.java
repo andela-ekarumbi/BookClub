@@ -22,17 +22,19 @@ public class LibraryCatalogueTest {
 
     private LibraryCatalogue catalogue5;
 
-    private Book testBook1;
+    private Book bookDavidCopperfield;
 
-    private Book testBook2;
+    private Book bookTreasureIsland;
 
-    private Book testBook3;
+    private Book bookMeinKampf;
 
-    private String testIsbn1;
+    private Book bookHuckFinn;
 
-    private String testIsbn2;
+    private String bookTreasureIslandIsbn;
 
-    private String testIsbn3;
+    private String bookHuckFinnIsbn;
+
+    private String bookMeinKampfIsbn;
 
     private String generateIsbn() {
         double randomId = Math.random() * 10000000;
@@ -43,13 +45,13 @@ public class LibraryCatalogueTest {
     @Before
     public  void beforeTestAddNewBook() {
         catalogue1 = new LibraryCatalogue();
-        testBook1 = new Book();
-        testBook1.setIsbn(generateIsbn());
+        bookDavidCopperfield = new Book();
+        bookDavidCopperfield.setIsbn(generateIsbn());
     }
 
     @Test
     public void testAddNewBook() throws Exception {
-        assertTrue(catalogue1.addNewBook(testBook1));
+        assertTrue(catalogue1.addNewBook(bookDavidCopperfield));
     }
 
     @Before
@@ -65,38 +67,38 @@ public class LibraryCatalogueTest {
     @Test
     public void testGetAllBooks() {
         List<Book> books = catalogue2.getAllBooks();
-        assertNotSame(null, books);
+        assertNotNull(books);
         assertEquals(5, books.size());
     }
 
     @Before
     public void beforeTestGetBookByIsbn() {
-        testBook2 = new Book();
-        testIsbn1 = generateIsbn();
-        testBook2.setIsbn(testIsbn1);
+        bookTreasureIsland = new Book();
+        bookTreasureIslandIsbn = generateIsbn();
+        bookTreasureIsland.setIsbn(bookTreasureIslandIsbn);
 
         catalogue3 = new LibraryCatalogue();
-        catalogue3.addNewBook(testBook2);
+        catalogue3.addNewBook(bookTreasureIsland);
     }
 
     @Test
     public void testGetBookByIsbn() throws Exception {
-        Book book = catalogue3.getBookByIsbn(testIsbn1);
-        assertNotSame(null, book);
-        assertEquals(testIsbn1, book.getIsbn());
+        Book book = catalogue3.getBookByIsbn(bookTreasureIslandIsbn);
+        assertNotNull(book);
+        assertEquals(bookTreasureIslandIsbn, book.getIsbn());
     }
 
     @Before
     public void beforeTestUpdateBookDetails() {
-        testBook3 = new Book();
-        testIsbn2 = generateIsbn();
-        testBook3.setIsbn(testIsbn2);
-        testBook3.setSynopsis("Lorem ipsum dolor sit amet");
-        testBook3.setTitle("Lorem Ipsum");
-        testBook3.setAuthorName("Unknown Latin Guy");
+        bookHuckFinn = new Book();
+        bookHuckFinnIsbn = generateIsbn();
+        bookHuckFinn.setIsbn(bookHuckFinnIsbn);
+        bookHuckFinn.setSynopsis("Lorem ipsum dolor sit amet");
+        bookHuckFinn.setTitle("Lorem Ipsum");
+        bookHuckFinn.setAuthorName("Unknown Latin Guy");
 
         catalogue4 = new LibraryCatalogue();
-        catalogue4.addNewBook(testBook3);
+        catalogue4.addNewBook(bookHuckFinn);
     }
 
     @Test
@@ -107,28 +109,28 @@ public class LibraryCatalogueTest {
         updateBook.setTitle("Karibu Kenya");
         updateBook.setAuthorName("Eston Karumbi");
 
-        assertTrue(catalogue4.updateBookDetails(testIsbn2, updateBook));
+        assertTrue(catalogue4.updateBookDetails(bookHuckFinnIsbn, updateBook));
 
-        Book changedBook = catalogue4.getBookByIsbn(testIsbn2);
+        Book changedBook = catalogue4.getBookByIsbn(bookHuckFinnIsbn);
         assertEquals("Hapa Kenya Hakuna Matata.", changedBook.getSynopsis());
         assertEquals("Eston Karumbi", changedBook.getAuthorName());
     }
 
     @Before
     public void beforeTestDeleteBook() {
-        Book deleteBook = new Book();
-        testIsbn3 = generateIsbn();
-        deleteBook.setIsbn(testIsbn3);
+        bookMeinKampf = new Book();
+        bookMeinKampfIsbn = generateIsbn();
+        bookMeinKampf.setIsbn(bookMeinKampfIsbn);
 
         catalogue5 = new LibraryCatalogue();
-        catalogue5.addNewBook(deleteBook);
+        catalogue5.addNewBook(bookMeinKampf);
     }
 
     @Test
     public void testDeleteBook() throws Exception {
-        assertTrue(catalogue5.deleteBook(testIsbn3));
+        assertTrue(catalogue5.deleteBook(bookMeinKampfIsbn));
 
-        Book confirmBook = catalogue5.getBookByIsbn(testIsbn3);
+        Book confirmBook = catalogue5.getBookByIsbn(bookMeinKampfIsbn);
         assertEquals(null, confirmBook);
     }
 }

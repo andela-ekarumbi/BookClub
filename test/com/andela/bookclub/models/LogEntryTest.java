@@ -12,25 +12,25 @@ public class LogEntryTest {
 
     private LogEntry logEntry = new LogEntry();
 
-    private Member member;
+    private Member memberEston;
 
     private Date timeStart;
 
     private Date timeEnd;
 
-    private StaffMember staffMember;
+    private StaffMember staffJames;
 
     @Before
     public void beforeTestGetMember() {
-        member = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        logEntry.setMember(member);
+        memberEston = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        logEntry.setMember(memberEston);
     }
 
     @Test
     public void testGetMember() throws Exception {
         Member logMember = logEntry.getMember();
         assertNotSame(null, logMember);
-        assertEquals(member, logMember);
+        assertEquals(memberEston, logMember);
     }
 
     @Before
@@ -73,15 +73,15 @@ public class LogEntryTest {
 
     @Before
     public void beforeTestGetLoggedBy() {
-        staffMember = new StaffMember();
-        logEntry.setLoggedBy(staffMember);
+        staffJames = new StaffMember();
+        logEntry.setLoggedBy(staffJames);
     }
 
     @Test
     public void testGetLoggedBy() throws Exception {
         StaffMember member = logEntry.getLoggedBy();
         assertNotSame(null, member);
-        assertEquals(staffMember, member);
+        assertEquals(staffJames, member);
     }
 }
 

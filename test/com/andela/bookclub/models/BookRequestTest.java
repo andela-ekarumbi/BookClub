@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Date;
-import java.util.Calendar;
 
 import static org.junit.Assert.*;
 
@@ -15,11 +14,11 @@ public class BookRequestTest {
 
     private BookRequest bookRequest = new BookRequest();
 
-    private Book bookToRequest = new Book();
+    private Book treasureIsland = new Book();
 
-    private Member member;
+    private Member studentEston;
 
-    private StaffMember staffMember;
+    private StaffMember staffJames;
 
     private Date bookRequestedDate = new Date();
 
@@ -29,30 +28,30 @@ public class BookRequestTest {
 
     @Before
     public void beforeTestGetRequestedBook() {
-        bookToRequest.setTitle("Treasure Island");
-        bookRequest.setRequestedBook(bookToRequest);
+        treasureIsland.setTitle("Treasure Island");
+        bookRequest.setRequestedBook(treasureIsland);
     }
 
     @Test
     public void testGetRequestedBook() throws Exception {
         Book requestedBook = bookRequest.getRequestedBook();
         assertNotSame(null, requestedBook);
-        assertEquals(bookToRequest, requestedBook);
+        assertEquals(treasureIsland, requestedBook);
     }
 
     @Before
     public void beforeTestGetBorrower() {
-        member = mock(Member.class, CALLS_REAL_METHODS);
-        member.setFirstName("John");
-        member.setJoinedDate(new Date());
-        bookRequest.setBorrower(member);
+        studentEston = mock(Member.class, CALLS_REAL_METHODS);
+        studentEston.setFirstName("John");
+        studentEston.setJoinedDate(new Date());
+        bookRequest.setBorrower(studentEston);
     }
 
     @Test
     public void testGetBorrower() throws Exception {
         Member bookBorrower = bookRequest.getBorrower();
         assertNotSame(null, bookBorrower);
-        assertEquals(member, bookBorrower);
+        assertEquals(studentEston, bookBorrower);
     }
 
     @Before
@@ -92,16 +91,16 @@ public class BookRequestTest {
 
     @Before
     public void beforeTestGetGranter() {
-        staffMember = new StaffMember();
-        staffMember.setSurname("Kamau");
-        bookRequest.setGranter(staffMember);
+        staffJames = new StaffMember();
+        staffJames.setSurname("Kamau");
+        bookRequest.setGranter(staffJames);
     }
 
     @Test
     public void testGetGranter() throws Exception {
         StaffMember requestGranter = bookRequest.getGranter();
         assertNotSame(null, requestGranter);
-        assertEquals(staffMember, requestGranter);
+        assertEquals(staffJames, requestGranter);
     }
 
     @Before

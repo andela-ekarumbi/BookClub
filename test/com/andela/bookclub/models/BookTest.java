@@ -7,16 +7,16 @@ import static org.junit.Assert.*;
 
 public class BookTest {
 
-    private Book book = new Book();
+    private Book bookFoo = new Book();
 
     @Before
     public void beforeTestGetTitle() {
-        book.setTitle("Foo");
+        bookFoo.setTitle("Foo");
     }
 
     @Test
     public void testGetTitle() throws Exception {
-        String bookTitle = book.getTitle();
+        String bookTitle = bookFoo.getTitle();
         assertNotSame(null, bookTitle);
         assertNotSame("", bookTitle);
         assertEquals("Foo", bookTitle);
@@ -24,12 +24,12 @@ public class BookTest {
 
     @Before
     public void beforeTestGetIsbn() {
-        book.setIsbn("1234-5678-9123");
+        bookFoo.setIsbn("1234-5678-9123");
     }
 
     @Test
     public void testGetIsbn() throws Exception {
-        String bookIsbn = book.getIsbn();
+        String bookIsbn = bookFoo.getIsbn();
         assertNotSame(null, bookIsbn);
         assertNotSame("", bookIsbn);
         assertEquals("1234-5678-9123", bookIsbn);
@@ -37,12 +37,12 @@ public class BookTest {
 
     @Before
     public void beforeTestGetAuthorName() {
-        book.setAuthorName("John Doe");
+        bookFoo.setAuthorName("John Doe");
     }
 
     @Test
     public void testGetAuthorName() throws Exception {
-        String bookAuthorName = book.getAuthorName();
+        String bookAuthorName = bookFoo.getAuthorName();
         assertNotSame(null, bookAuthorName);
         assertNotSame("", bookAuthorName);
         assertEquals("John Doe", bookAuthorName);
@@ -50,12 +50,12 @@ public class BookTest {
 
     @Before
     public void beforeTestGetSynopsis() {
-        book.setSynopsis("Lorem ipsum dolor sit amet");
+        bookFoo.setSynopsis("Lorem ipsum dolor sit amet");
     }
 
     @Test
     public void testGetSynopsis() throws Exception {
-        String bookSynopsis = book.getSynopsis();
+        String bookSynopsis = bookFoo.getSynopsis();
         assertNotSame(null, bookSynopsis);
         assertNotSame("", bookSynopsis);
         assertEquals("Lorem ipsum dolor sit amet", bookSynopsis);

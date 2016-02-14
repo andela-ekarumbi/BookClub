@@ -13,177 +13,177 @@ public class LibrarianTest {
 
     // Private variables
 
-    private Librarian librarian1;
+    private Librarian librarianJohn;
 
-    private Librarian librarian2;
+    private Librarian librarianPeter;
 
-    private Librarian librarian3;
+    private Librarian librarianJames;
 
-    private StaffMember staffMember1;
+    private StaffMember staffJohn;
 
-    private StaffMember staffMember2;
+    private StaffMember staffPeter;
 
-    private StaffMember staffMember3;
+    private StaffMember staffMatthew;
     
-    private StaffMember staffMember4;
+    private StaffMember staffJames;
 
-    private StaffMember staffMember5;
+    private StaffMember staffMark;
 
-    private StudentMember student1;
+    private StudentMember studentLuke;
 
-    private StudentMember student2;
+    private StudentMember studentPaul;
 
-    private StudentMember student3;
+    private StudentMember studentEston;
 
-    private StudentMember student4;
+    private StudentMember studentSu;
 
-    private StudentMember student5;
+    private StudentMember studentSteve;
 
     private BookRequest request1;
 
-    private Book book1;
+    private Book bookTreasureIsland;
 
-    private Book book2;
+    private Book bookDavidCopperfield;
 
-    private Book book3;
+    private Book bookHuckFinn;
 
-    private Book book4;
+    private Book bookThreeMusketeers;
 
     // Test methods
 
     @Before
     public void beforeTestRegisterNewBook() {
-        staffMember1 = new StaffMember();
-        staffMember1.setId("123654");
+        staffJohn = new StaffMember();
+        staffJohn.setId("123654");
     }
 
     @Test
     public void testRegisterNewBook() throws Exception {
-        librarian1 = new Librarian(staffMember1);
-        assertTrue(librarian1.registerNewBook(new Book()));
+        librarianJohn = new Librarian(staffJohn);
+        assertTrue(librarianJohn.registerNewBook(new Book()));
     }
 
     @Before
     public void beforeTestAddBookRequest() {
-        book1 = new Book();
-        book1.setTitle("Test book 1");
+        bookTreasureIsland = new Book();
+        bookTreasureIsland.setTitle("Treasure Island");
 
-        staffMember2 = new StaffMember();
+        staffPeter = new StaffMember();
 
-        student1 = new StudentMember();
+        studentLuke = new StudentMember();
 
         request1 = new BookRequest();
         request1.setRequestDate(new Date());
-        request1.setBorrower(student1);
+        request1.setBorrower(studentLuke);
     }
 
     @Test
     public void testAddBookRequest() throws Exception {
-        librarian2 = new Librarian(staffMember2);
-        assertTrue(librarian2.addBookRequest(request1));
+        librarianPeter = new Librarian(staffPeter);
+        assertTrue(librarianPeter.addBookRequest(request1));
     }
 
     @Before
     public void beforeTestLendBooks() {
 
-        book2 = new Book();
-        book2.setTitle("Test book 2");
-        book3 = new Book();
-        book3.setTitle("Test book 3");
-        book4 = new Book();
-        book4.setTitle("Test book 4");
+        bookDavidCopperfield = new Book();
+        bookDavidCopperfield.setTitle("David Copperfield");
+        bookHuckFinn = new Book();
+        bookHuckFinn.setTitle("Huck Finn");
+        bookThreeMusketeers = new Book();
+        bookThreeMusketeers.setTitle("Three Musketeers");
 
-        staffMember5 = new StaffMember();
-        staffMember5.setId("staff5");
-        staffMember2 = new StaffMember();
-        staffMember2.setId("staff2");
-        staffMember3 = new StaffMember();
-        staffMember3.setId("staff3");
+        staffMark = new StaffMember();
+        staffMark.setId("staff5");
+        staffPeter = new StaffMember();
+        staffPeter.setId("staff2");
+        staffMatthew = new StaffMember();
+        staffMatthew.setId("staff3");
 
-        student5 = new StudentMember();
-        student5.setId("student5");
-        student2 = new StudentMember();
-        student2.setId("student2");
-        student3 = new StudentMember();
-        student3.setId("student3");
-        student4 = new StudentMember();
-        student4.setId("student4");
+        studentSteve = new StudentMember();
+        studentSteve.setId("studentSteve");
+        studentPaul = new StudentMember();
+        studentPaul.setId("studentPaul");
+        studentEston = new StudentMember();
+        studentEston.setId("studentEston");
+        studentSu = new StudentMember();
+        studentSu.setId("studentSu");
 
-        staffMember4 = new StaffMember();
-        staffMember4.setId("staff4");
-        librarian3 = new Librarian(staffMember4);
+        staffJames = new StaffMember();
+        staffJames.setId("staff4");
+        librarianJames = new Librarian(staffJames);
 
         BookRequest bookRequest1 = new BookRequest();
-        bookRequest1.setBorrower(student5);
-        bookRequest1.setRequestedBook(book2);
-        librarian3.addBookRequest(bookRequest1);
+        bookRequest1.setBorrower(studentSteve);
+        bookRequest1.setRequestedBook(bookDavidCopperfield);
+        librarianJames.addBookRequest(bookRequest1);
 
         BookRequest bookRequest2 = new BookRequest();
-        bookRequest2.setBorrower(student2);
-        bookRequest2.setRequestedBook(book2);
-        librarian3.addBookRequest(bookRequest2);
+        bookRequest2.setBorrower(studentPaul);
+        bookRequest2.setRequestedBook(bookDavidCopperfield);
+        librarianJames.addBookRequest(bookRequest2);
 
         BookRequest bookRequest3 = new BookRequest();
-        bookRequest3.setBorrower(student3);
-        bookRequest3.setRequestedBook(book2);
-        librarian3.addBookRequest(bookRequest3);
+        bookRequest3.setBorrower(studentEston);
+        bookRequest3.setRequestedBook(bookDavidCopperfield);
+        librarianJames.addBookRequest(bookRequest3);
 
         BookRequest bookRequest4 = new BookRequest();
-        bookRequest4.setBorrower(student4);
-        bookRequest4.setRequestedBook(book2);
-        librarian3.addBookRequest(bookRequest4);
+        bookRequest4.setBorrower(studentSu);
+        bookRequest4.setRequestedBook(bookDavidCopperfield);
+        librarianJames.addBookRequest(bookRequest4);
 
         BookRequest bookRequest5 = new BookRequest();
-        bookRequest5.setBorrower(staffMember5);
-        bookRequest5.setRequestedBook(book3);
-        librarian3.addBookRequest(bookRequest5);
+        bookRequest5.setBorrower(staffMark);
+        bookRequest5.setRequestedBook(bookHuckFinn);
+        librarianJames.addBookRequest(bookRequest5);
 
         BookRequest bookRequest6 = new BookRequest();
-        bookRequest6.setBorrower(staffMember2);
-        bookRequest6.setRequestedBook(book3);
-        librarian3.addBookRequest(bookRequest6);
+        bookRequest6.setBorrower(staffPeter);
+        bookRequest6.setRequestedBook(bookHuckFinn);
+        librarianJames.addBookRequest(bookRequest6);
 
         BookRequest bookRequest7 = new BookRequest();
-        bookRequest7.setBorrower(staffMember3);
-        bookRequest7.setRequestedBook(book3);
-        librarian3.addBookRequest(bookRequest7);
+        bookRequest7.setBorrower(staffMatthew);
+        bookRequest7.setRequestedBook(bookHuckFinn);
+        librarianJames.addBookRequest(bookRequest7);
 
         BookRequest bookRequest8 = new BookRequest();
-        bookRequest8.setBorrower(student1);
-        bookRequest8.setRequestedBook(book4);
-        librarian3.addBookRequest(bookRequest8);
+        bookRequest8.setBorrower(studentLuke);
+        bookRequest8.setRequestedBook(bookThreeMusketeers);
+        librarianJames.addBookRequest(bookRequest8);
 
         BookRequest bookRequest9 = new BookRequest();
-        bookRequest9.setBorrower(student2);
-        bookRequest9.setRequestedBook(book4);
-        librarian3.addBookRequest(bookRequest9);
+        bookRequest9.setBorrower(studentPaul);
+        bookRequest9.setRequestedBook(bookThreeMusketeers);
+        librarianJames.addBookRequest(bookRequest9);
 
         BookRequest bookRequest10 = new BookRequest();
-        bookRequest10.setBorrower(staffMember3);
-        bookRequest10.setRequestedBook(book4);
-        librarian3.addBookRequest(bookRequest10);
+        bookRequest10.setBorrower(staffMatthew);
+        bookRequest10.setRequestedBook(bookThreeMusketeers);
+        librarianJames.addBookRequest(bookRequest10);
 
         BookRequest bookRequest11 = new BookRequest();
-        bookRequest11.setBorrower(student1);
-        bookRequest11.setRequestedBook(book4);
-        librarian3.addBookRequest(bookRequest11);
+        bookRequest11.setBorrower(studentLuke);
+        bookRequest11.setRequestedBook(bookThreeMusketeers);
+        librarianJames.addBookRequest(bookRequest11);
     }
 
     @Test
     public void testLendBooks() throws Exception {
 
-        Map<Book, Member> lentBooks = librarian3.lendBooks();
+        Map<Book, Member> lentBooks = librarianJames.lendBooks();
 
         assertNotNull(lentBooks);
 
-        Member book2Recipient = lentBooks.get(book2);
-        assertEquals(student5.getId(), book2Recipient.getId());
+        Member book2Recipient = lentBooks.get(bookDavidCopperfield);
+        assertEquals(studentSteve.getId(), book2Recipient.getId());
 
-        Member book3Recipient = lentBooks.get(book3);
-        assertEquals(staffMember5.getId(), book3Recipient.getId());
+        Member book3Recipient = lentBooks.get(bookHuckFinn);
+        assertEquals(staffMark.getId(), book3Recipient.getId());
 
-        Member book4Recipient = lentBooks.get(book4);
-        assertEquals(staffMember3.getId(), book4Recipient.getId());
+        Member book4Recipient = lentBooks.get(bookThreeMusketeers);
+        assertEquals(staffMatthew.getId(), book4Recipient.getId());
 
     }
 }

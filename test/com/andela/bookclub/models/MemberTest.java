@@ -12,76 +12,76 @@ import static org.mockito.Mockito.mock;
 
 public class MemberTest {
 
-    Member member = mock(Member.class, Mockito.CALLS_REAL_METHODS);
+    Member memberJohn = mock(Member.class, Mockito.CALLS_REAL_METHODS);
 
     @Before
     public void beforeTestGetSurname() {
-        member.setSurname("Smith");
+        memberJohn.setSurname("Smith");
     }
 
     @Test
     public void testGetSurname() throws Exception {
-        String memberSurname = member.getSurname();
+        String memberSurname = memberJohn.getSurname();
         assertNotSame(null, memberSurname);
         assertEquals("Smith", memberSurname);
     }
 
     @Before
     public void beforeTestGetFirstName() {
-        member.setFirstName("John");
+        memberJohn.setFirstName("John");
     }
 
     @Test
     public void testGetFirstName() throws Exception {
-        String memberFirstName = member.getFirstName();
+        String memberFirstName = memberJohn.getFirstName();
         assertNotSame(null, memberFirstName);
         assertEquals("John", memberFirstName);
     }
 
     @Before
     public void beforeTestGetMiddletName() {
-        member.setMiddleName("Kamau");
+        memberJohn.setMiddleName("Kamau");
     }
 
     @Test
     public void testGetMiddleName() throws Exception {
-        String memberMiddleName = member.getMiddleName();
+        String memberMiddleName = memberJohn.getMiddleName();
         assertNotSame(null, memberMiddleName);
         assertEquals("Kamau", memberMiddleName);
     }
 
     @Before
     public void beforeTestGetNationalIdNumber() {
-        member.setNationalIdNumber("27855410");
+        memberJohn.setNationalIdNumber("27855410");
     }
 
     @Test
     public void testGetNationalIdNumber() throws Exception {
-        String membernationalIdNumber = member.getNationalIdNumber();
+        String membernationalIdNumber = memberJohn.getNationalIdNumber();
         assertNotSame(null, membernationalIdNumber);
         assertEquals("27855410", membernationalIdNumber);
     }
 
     @Before
     public void beforeTestGetAge() {
-        member.setAge(25);
+        memberJohn.setAge(25);
     }
 
     @Test
     public void testGetAge() throws Exception {
-        int memberAge = member.getAge();
+        int memberAge = memberJohn.getAge();
         assertNotSame(0, memberAge);
         assertEquals(25, memberAge);
     }
 
     @Before
     public void beforeTestGetGender() {
-        member.setGender("M");
+        memberJohn.setGender("M");
     }
 
     @Test
     public void testGetGender() throws Exception {
-        String memberGender = member.getGender();
+        String memberGender = memberJohn.getGender();
         assertNotSame(null, memberGender);
         assertEquals(1, memberGender.length());
         assertEquals("M", memberGender);
@@ -89,36 +89,36 @@ public class MemberTest {
 
     @Before
     public void beforeGetGetEmail() {
-        member.setEmailAddress("foo@bar.com");
+        memberJohn.setEmailAddress("foo@bar.com");
     }
 
     @Test
     public void testGetEmailAddress() throws Exception {
-        String memberEmailAddress = member.getEmailAddress();
+        String memberEmailAddress = memberJohn.getEmailAddress();
         assertNotSame(null, memberEmailAddress);
         assertEquals("foo@bar.com", memberEmailAddress);
     }
 
     @Before
     public void beforeGetPhoneNumber() {
-        member.setPhoneNumber("0723220576");
+        memberJohn.setPhoneNumber("0723220576");
     }
 
     @Test
     public void testGetPhoneNumber() throws Exception {
-        String memberPhoneNumber = member.getPhoneNumber();
+        String memberPhoneNumber = memberJohn.getPhoneNumber();
         assertNotSame(null, memberPhoneNumber);
         assertEquals("0723220576", memberPhoneNumber);
     }
 
     @Before
     public void beforeTestGetJoinedDate() {
-        member.setJoinedDate(new Date());
+        memberJohn.setJoinedDate(new Date());
     }
 
     @Test
     public void testGetJoinedDate() throws Exception {
-        Date memberJoinedDate = member.getJoinedDate();
+        Date memberJoinedDate = memberJohn.getJoinedDate();
         assertNotSame(null, memberJoinedDate);
     }
 }

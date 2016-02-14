@@ -8,16 +8,16 @@ import static org.junit.Assert.assertNotSame;
 
 public class StudentMemberTest {
 
-    private StudentMember studentMember = new StudentMember();
+    private StudentMember studentEston = new StudentMember();
 
     @Before
     public void beforeTestGetSchool() {
-        studentMember.setSchool("Kayamba high school");
+        studentEston.setSchool("Kayamba high school");
     }
 
     @Test
     public void testGetSchool() throws Exception {
-        String studentMemberSchool = studentMember.getSchool();
+        String studentMemberSchool = studentEston.getSchool();
         assertNotSame(null, studentMemberSchool);
         assertEquals("Kayamba high school", studentMemberSchool);
     }

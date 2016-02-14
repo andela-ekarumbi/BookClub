@@ -18,16 +18,16 @@ public class LibraryMembersTest {
 
     private LibraryMembers libraryMembers3;
 
-    private Member testMember1;
+    private Member memberEston;
 
-    private String member1Id;
+    private String memberEstonId;
 
     private String deleteMemberId;
 
     @Test
     public void testAddNewMember() throws Exception {
-        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        assertTrue(libraryMembers.addNewMember(testMember1));
+        memberEston = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        assertTrue(libraryMembers.addNewMember(memberEston));
     }
 
     @Before
@@ -44,32 +44,32 @@ public class LibraryMembersTest {
     @Test
     public void testGetAllMembers() throws Exception {
         List<Member> members = libraryMembers.getAllMembers();
-        assertNotSame(null, members);
+        assertNotNull(members);
         assertEquals(5, members.size());
     }
 
     @Before
     public void beforeTestGetMemberById() {
         libraryMembers2 = new LibraryMembers();
-        member1Id = "123457";
-        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        testMember1.setId(member1Id);
-        libraryMembers2.addNewMember(testMember1);
+        memberEstonId = "123457";
+        memberEston = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        memberEston.setId(memberEstonId);
+        libraryMembers2.addNewMember(memberEston);
     }
 
     @Test
     public void testGetMemberById() throws Exception {
-        Member member1 = libraryMembers2.getMemberById(member1Id);
-        assertNotSame(null, member1);
-        assertEquals(testMember1.getId(), member1.getId());
+        Member testGetMember = libraryMembers2.getMemberById(memberEstonId);
+        assertNotNull(testGetMember);
+        assertEquals(memberEston.getId(), testGetMember.getId());
     }
 
     @Before
     public void beforeTestUpdateMemberDetails() {
         libraryMembers3 = new LibraryMembers();
-        testMember1 = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        testMember1.setId("6789");
-        libraryMembers3.addNewMember(testMember1);
+        memberEston = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
+        memberEston.setId("6789");
+        libraryMembers3.addNewMember(memberEston);
     }
 
     @Test

@@ -14,7 +14,7 @@ public class BookRequestTest {
 
     private BookRequest bookRequest = new BookRequest();
 
-    private Book treasureIsland = new Book();
+    private Book treasureIsland = new Book("28745682");
 
     private Member studentEston;
 
@@ -91,7 +91,7 @@ public class BookRequestTest {
 
     @Before
     public void beforeTestGetGranter() {
-        staffJames = new StaffMember();
+        staffJames = new StaffMember("staffJ");
         staffJames.setSurname("Kamau");
         bookRequest.setGranter(staffJames);
     }

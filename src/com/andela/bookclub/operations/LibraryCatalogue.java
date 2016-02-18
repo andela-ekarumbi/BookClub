@@ -29,6 +29,16 @@ public class LibraryCatalogue {
         }
     }
 
+    public boolean addBookCollection(List<Book> books) {
+        if (books != null) {
+            for (Book book : books) {
+                addNewBook(book);
+            }
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Returns a list of all the books in the catalogue.
      * @return a List object containing all the books in the catalogue.
@@ -56,91 +66,26 @@ public class LibraryCatalogue {
     }
     
     private int searchBookByIsbn(String isbn) {
-
-        Collections.sort(books);
-
-        int start = 0;
-
-        int length = books.size();
-
-        if (length == 0) {
-            return  -1;
-        }
-
-        if (length == 1) {
-            if (books.get(0).getIsbn().equals(isbn)) {
-                return 0;
-            } else {
-                return  -1;
-            }
-        }
-
-        int end = length - 1;
-
-        while (start <= end) {
-
-            if (books.get(start).getIsbn().equals(isbn)) {
-                return start;
-            }
-
-            if (books.get(end).getIsbn().equals(isbn)) {
-                return end;
-            }
-
-            int mid = Math.floorDiv((start + end), 2);
-
-            if (books.get(mid).getIsbn().equals(isbn)) {
-                return mid;
-            } else {
-
-                if (books.get(mid).getIsbn().compareTo(isbn) < 0) {
-                    end = mid - 1;
-                    start += 1;
-                } else {
-                    start = mid + 1;
-                    end -= 1;
-                }
-            }
-        }
-
-        return -1;
+        return Utility.searchByPropertyValue(books, "isbn", isbn);
     }
 
     /**
      * Updates the details of the book with the given ISBN number, using the
      * object given to hold the incoming values.
      * @param isbn The ISBN number of the book to be updated.
-     * @param book The Book object containing the values to be updated.
+     * @param incomingBook The Book object containing the values to be updated.
      * @return true for a successful operation, false otherwise.
      * */
 
-    public boolean updateBookDetails(String isbn, Book book) {
+    public boolean updateBookDetails(String isbn, Book incomingBook) {
 
         try {
             Book existingBook = getBookByIsbn(isbn);
 
             if (existingBook != null) {
-
-                Class bookClass = Book.class;
-
-                Field[] bookFields = bookClass.getDeclaredFields();
-
-                for (Field field: bookFields) {
-
-                    field.setAccessible(true);
-
-                    if (field.get(book) != null) {
-
-                        Object incomingValue = field.get(book);
-
-                        field.set(existingBook, incomingValue);
-                    }
-                }
-                return true;
-
-            } else {
-                return false;
+                return Utility.copyFieldsFromObject(existingBook, incomingBook);
             }
+            return false;
         } catch (Exception exception) {
             return false;
         }

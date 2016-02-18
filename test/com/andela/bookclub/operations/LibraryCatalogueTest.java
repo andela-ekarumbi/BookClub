@@ -2,9 +2,11 @@ package com.andela.bookclub.operations;
 
 import com.andela.bookclub.models.Book;
 
+import com.andela.bookclub.models.Member;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -45,8 +47,7 @@ public class LibraryCatalogueTest {
     @Before
     public  void beforeTestAddNewBook() {
         catalogue1 = new LibraryCatalogue();
-        bookDavidCopperfield = new Book();
-        bookDavidCopperfield.setIsbn(generateIsbn());
+        bookDavidCopperfield = new Book(generateIsbn());
     }
 
     @Test
@@ -58,22 +59,29 @@ public class LibraryCatalogueTest {
     public void beforeTestGetAllBooks() {
         catalogue2 = new LibraryCatalogue();
 
-        for (int i = 0; i < 5; i++) {
-            catalogue2.addNewBook(new Book());
-        }
+        List<Book> newBooks = new ArrayList<>();
 
+        Book bookJava = new Book("3845768");
+        Book bookCSharp = new Book("987667576");
+        Book bookJavaScript = new Book("9823746");
+
+        newBooks.add(bookCSharp);
+        newBooks.add(bookJava);
+        newBooks.add(bookJavaScript);
+
+        catalogue2.addBookCollection(newBooks);
     }
 
     @Test
     public void testGetAllBooks() {
         List<Book> books = catalogue2.getAllBooks();
         assertNotNull(books);
-        assertEquals(5, books.size());
+        assertEquals(3, books.size());
     }
 
     @Before
     public void beforeTestGetBookByIsbn() {
-        bookTreasureIsland = new Book();
+        bookTreasureIsland = new Book("287462834");
         bookTreasureIslandIsbn = generateIsbn();
         bookTreasureIsland.setIsbn(bookTreasureIslandIsbn);
 
@@ -90,9 +98,8 @@ public class LibraryCatalogueTest {
 
     @Before
     public void beforeTestUpdateBookDetails() {
-        bookHuckFinn = new Book();
         bookHuckFinnIsbn = generateIsbn();
-        bookHuckFinn.setIsbn(bookHuckFinnIsbn);
+        bookHuckFinn = new Book(bookHuckFinnIsbn);
         bookHuckFinn.setSynopsis("Lorem ipsum dolor sit amet");
         bookHuckFinn.setTitle("Lorem Ipsum");
         bookHuckFinn.setAuthorName("Unknown Latin Guy");
@@ -104,7 +111,7 @@ public class LibraryCatalogueTest {
     @Test
     public void testUpdateBookDetails() throws Exception {
 
-        Book updateBook = new Book();
+        Book updateBook = new Book(bookHuckFinnIsbn);
         updateBook.setSynopsis("Hapa Kenya Hakuna Matata.");
         updateBook.setTitle("Karibu Kenya");
         updateBook.setAuthorName("Eston Karumbi");
@@ -118,9 +125,8 @@ public class LibraryCatalogueTest {
 
     @Before
     public void beforeTestDeleteBook() {
-        bookMeinKampf = new Book();
         bookMeinKampfIsbn = generateIsbn();
-        bookMeinKampf.setIsbn(bookMeinKampfIsbn);
+        bookMeinKampf = new Book(bookMeinKampfIsbn);
 
         catalogue5 = new LibraryCatalogue();
         catalogue5.addNewBook(bookMeinKampf);

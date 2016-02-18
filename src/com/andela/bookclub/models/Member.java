@@ -4,27 +4,23 @@ import java.util.Date;
 
 public abstract class Member extends Model{
 
-    // Private attributes
+    protected String surname;
 
-    private String surname;
+    protected String firstName;
 
-    private String firstName;
+    protected String middleName;
 
-    private String middleName;
+    protected String nationalIdNumber;
 
-    private String nationalIdNumber;
+    protected Integer age;
 
-    private int age;
+    protected String gender;
 
-    private String gender;
+    protected String emailAddress;
 
-    private String emailAddress;
+    protected String phoneNumber;
 
-    private String phoneNumber;
-
-    private Date joinedDate;
-
-    // Setters and getters
+    protected Date joinedDate;
 
     public String getSurname() {
         return surname;
@@ -58,11 +54,11 @@ public abstract class Member extends Model{
         this.nationalIdNumber = nationalIdNumber;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

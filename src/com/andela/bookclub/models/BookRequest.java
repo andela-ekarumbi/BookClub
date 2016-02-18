@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class BookRequest extends Model {
 
-    // Private fields
+
 
     private Book requestedBook;
 
@@ -22,7 +22,7 @@ public class BookRequest extends Model {
 
     private boolean isBookReturned;
 
-    // Getters and setters
+
 
     public Book getRequestedBook() {
         return requestedBook;

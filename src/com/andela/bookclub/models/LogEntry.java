@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class LogEntry extends Model {
 
-    // Private fields
+
 
     private Member member;
 
@@ -16,7 +16,7 @@ public class LogEntry extends Model {
 
     private StaffMember loggedBy;
 
-    // Getters and setters
+
 
     public Member getMember() {
         return member;

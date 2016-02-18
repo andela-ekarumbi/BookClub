@@ -1,7 +1,7 @@
 package com.andela.bookclub.models;
 
 public class Book extends Model {
-    // Private attributes
+
 
     private String title;
 
@@ -11,7 +11,9 @@ public class Book extends Model {
 
     private String synopsis;
 
-    // Getters snd setters
+    public Book(String isbn) {
+        this.isbn = isbn;
+    }
 
     public String getTitle() {
         return title;

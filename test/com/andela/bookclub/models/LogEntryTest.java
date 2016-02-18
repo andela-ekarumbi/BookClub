@@ -73,7 +73,7 @@ public class LogEntryTest {
 
     @Before
     public void beforeTestGetLoggedBy() {
-        staffJames = new StaffMember();
+        staffJames = new StaffMember("staffJ");
         logEntry.setLoggedBy(staffJames);
     }
 

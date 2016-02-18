@@ -8,16 +8,16 @@ import static org.junit.Assert.assertNotSame;
 
 public class StaffMemberTest {
 
-    private StaffMember staffMember = new StaffMember();
+    private StaffMember staffEston = new StaffMember("staffE");
 
     @Before
     public void beforeTestGetSalaryValue() {
-        staffMember.setSalaryValue(10000d);
+        staffEston.setSalaryValue(10000d);
     }
 
     @Test
     public void testGetSalaryValue() throws Exception {
-        double staffMemberSalary = staffMember.getSalaryValue();
+        double staffMemberSalary = staffEston.getSalaryValue();
         assertNotSame(0.0, staffMemberSalary);
         assertEquals(10000d, staffMemberSalary, 0.0);
     }

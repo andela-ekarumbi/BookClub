@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class BookTest {
 
-    private Book bookFoo = new Book();
+    private Book bookFoo = new Book("938764583");
 
     @Before
     public void beforeTestGetTitle() {

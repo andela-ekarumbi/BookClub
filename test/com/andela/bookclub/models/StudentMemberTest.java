@@ -8,7 +8,7 @@ import static org.junit.Assert.assertNotSame;
 
 public class StudentMemberTest {
 
-    private StudentMember studentEston = new StudentMember();
+    private StudentMember studentEston = new StudentMember("studE");
 
     @Before
     public void beforeTestGetSchool() {

@@ -52,7 +52,7 @@ public class LibraryMembersTest {
     public void testGetAllMembers() throws Exception {
         List<Member> members = libraryMembers.getAllMembers();
         assertNotNull(members);
-        assertEquals(3git, members.size());
+        assertEquals(3, members.size());
     }
 
     @Before

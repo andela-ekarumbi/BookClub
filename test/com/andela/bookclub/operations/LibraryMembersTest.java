@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -34,18 +35,24 @@ public class LibraryMembersTest {
     public void beforeTestGetAllMembers() {
         libraryMembers = new LibraryMembers();
 
-        for (int i = 0; i < 5; i++) {
-            Member addMember = new StudentMember();
-            addMember.setId(Integer.toString(i));
-            libraryMembers.addNewMember(addMember);
-        }
+        List<Member> newMembers = new ArrayList<>();
+
+        StudentMember studentAnne = new StudentMember("studA");
+        StudentMember studentBrian = new StudentMember("studB");
+        StudentMember studentCharlie = new StudentMember("studC");
+
+        newMembers.add(studentAnne);
+        newMembers.add(studentBrian);
+        newMembers.add(studentCharlie);
+
+        libraryMembers.addMemberCollection(newMembers);
     }
 
     @Test
     public void testGetAllMembers() throws Exception {
         List<Member> members = libraryMembers.getAllMembers();
         assertNotNull(members);
-        assertEquals(5, members.size());
+        assertEquals(3git, members.size());
     }
 
     @Before
@@ -67,24 +74,20 @@ public class LibraryMembersTest {
     @Before
     public void beforeTestUpdateMemberDetails() {
         libraryMembers3 = new LibraryMembers();
-        memberEston = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        memberEston.setId("6789");
+        memberEston = new StudentMember("6789");
         libraryMembers3.addNewMember(memberEston);
     }
 
     @Test
     public void testUpdateMemberDetails() throws Exception {
-        Member updateMember = Mockito.mock(Member.class, Mockito.CALLS_REAL_METHODS);
-        updateMember.setSurname("Kariuki");
-        updateMember.setFirstName("John");
+        StudentMember updateMember = new StudentMember("6789");
+        updateMember.setSchool("Andela Institute");
 
         assertTrue(libraryMembers3.updateMemberDetails("6789", updateMember));
 
         Member confirmMember = libraryMembers3.getMemberById("6789");
 
-        assertEquals("6789", confirmMember.getId());
-        assertEquals("Kariuki", confirmMember.getSurname());
-        assertEquals("John", confirmMember.getFirstName());
+        assertEquals("Andela Institute", ((StudentMember)confirmMember).getSchool());
     }
 
     @Before

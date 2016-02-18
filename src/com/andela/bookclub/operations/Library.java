@@ -7,7 +7,7 @@ import com.andela.bookclub.models.StaffMember;
 
 import java.util.*;
 
-public class Librarian {
+public class Library {
 
     private LibraryCatalogue catalogue;
 
@@ -24,7 +24,7 @@ public class Librarian {
      *
      * */
 
-    public Librarian(StaffMember staffOnDuty) {
+    public Library(StaffMember staffOnDuty) {
         this.staffOnDuty = staffOnDuty;
         this.staffBookQueueMap = new HashMap<>();
         this.studentBookQueueMap = new HashMap<>();
@@ -55,9 +55,8 @@ public class Librarian {
 
             if (borrower instanceof StaffMember) {
                 return addRequestToQueue(staffBookQueueMap, bookRequest);
-            } else {
-                return addRequestToQueue(studentBookQueueMap, bookRequest);
             }
+            return addRequestToQueue(studentBookQueueMap, bookRequest);
         } catch (Exception exception) {
             return false;
         }
@@ -90,18 +89,16 @@ public class Librarian {
 
         lentBooks = new HashMap<>();
 
-        for (Book book : staffBookQueueMap.keySet()) {
-            if (!lentBooks.containsKey(book)) {
-                lentBooks.put(book, null);
-            }
-        }
+        addUniqueKeysToMap(lentBooks, staffBookQueueMap);
 
-        for (Book book : studentBookQueueMap.keySet()) {
-            if (!lentBooks.containsKey(book)) {
-                lentBooks.put(book, null);
-            }
-        }
+        addUniqueKeysToMap(lentBooks, studentBookQueueMap);
 
+        decideBookRecipients();
+
+        return lentBooks;
+    }
+
+    private void decideBookRecipients() {
         for (Book book : lentBooks.keySet()) {
 
             if (staffBookQueueMap.containsKey(book)) {
@@ -110,8 +107,15 @@ public class Librarian {
                 assignBookToMember(studentBookQueueMap.get(book), book);
             }
         }
+    }
 
-        return lentBooks;
+    private void addUniqueKeysToMap(Map keysContainer, Map<Book, Queue<BookRequest>> keysSource) {
+
+        for (Book book : keysSource.keySet()) {
+            if (!keysContainer.containsKey(book)) {
+                keysContainer.put(book, null);
+            }
+        }
     }
 
     private void assignBookToMember(Queue<BookRequest> requests, Book book) {

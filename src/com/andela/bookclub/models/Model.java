@@ -12,8 +12,6 @@ public  abstract class Model implements Comparable<Model> {
         this.id = id;
     }
 
-    // Comparable implementation
-
     public int compareTo(Model m1) {
         if (m1.getId() != null && this.getId() != null) {
             return this.getId().compareTo(m1.getId());

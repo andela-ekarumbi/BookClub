@@ -5,7 +5,6 @@ import com.andela.bookclub.models.Member;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
 
 public class LibraryMembers {
 
@@ -27,6 +26,15 @@ public class LibraryMembers {
         } catch (Exception exception) {
             return false;
         }
+    }
+
+    public boolean addMemberCollection(List<Member> memberList) {
+        if (memberList != null) {
+            for (Member member : memberList) {
+                addNewMember(member);
+            }
+        }
+        return false;
     }
 
     /**
@@ -55,46 +63,31 @@ public class LibraryMembers {
     }
 
     private int memberSearch(String id) {
-        return Utility.searchById(members, id);
+        return Utility.searchByPropertyValue(members, "id", id);
     }
 
     /**
      * Updates the member with the given id, using the details in the given object.
      * @param id The id of the member to be updated.
-     * @param member The Member object containing the update details.
+     * @param incomingMember The Member object containing the update details.
      * @return true for a successful operation, false otherwise.
      * */
 
-    public boolean updateMemberDetails(String id, Member member) {
+    public boolean updateMemberDetails(String id, Member incomingMember) {
 
         try {
             Member existingMember = getMemberById(id);
 
             if (existingMember != null) {
-
-                Class memberClass = Member.class;
-
-                Field[] memberFields = memberClass.getDeclaredFields();
-
-                for (Field field: memberFields) {
-
-                    field.setAccessible(true);
-
-                    if (field.get(member) != null) {
-
-                        Object incomingValue = field.get(member);
-
-                        field.set(existingMember, incomingValue);
-                    }
-                }
-                return true;
-            } else {
-                return false;
+                return Utility.copyFieldsFromObject(existingMember, incomingMember);
             }
+            return false;
         } catch (Exception exception) {
             return false;
         }
     }
+
+
 
     /**
      * Deletes the member with the given id.

@@ -60,9 +60,8 @@ public class LibraryCatalogue {
 
         if (foundPosition == -1) {
             return null;
-        } else {
-            return books.get(foundPosition);
         }
+        return books.get(foundPosition);
     }
     
     private int searchBookByIsbn(String isbn) {

@@ -18,11 +18,17 @@ public class LibraryStorage<T extends Model> {
     }
 
     public boolean addItemCollection(List<T> incomingItems) {
+        if (incomingItems != null) {
+            for (T item : incomingItems) {
+                addNewItem(item);
+            }
+            return true;
+        }
         return false;
     }
 
     public List<T> getAllItems() {
-        return null;
+        return items;
     }
 
     public T getItemByUniqueId(String uniquePropertyName, String uniquePropertyValue) {

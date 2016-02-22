@@ -42,18 +42,18 @@ public class LibraryStorageTest {
     }
 
     @Before
-    public  void beforeTestAddNewBook() {
+    public  void beforeTestAddNewItem() {
         catalogue1 = new LibraryStorage<>();
         bookDavidCopperfield = new Book(generateIsbn());
     }
 
     @Test
-    public void testAddNewBook() throws Exception {
+    public void testAddNewItem() throws Exception {
         assertTrue(catalogue1.addNewItem(bookDavidCopperfield));
     }
 
     @Before
-    public void beforeTestGetAllBooks() {
+    public void beforeTestGetAllItems() {
         catalogue2 = new LibraryStorage<>();
 
         List<Book> newBooks = new ArrayList<>();
@@ -70,14 +70,14 @@ public class LibraryStorageTest {
     }
 
     @Test
-    public void testGetAllBooks() {
+    public void testGetAllItems() {
         List<Book> books = catalogue2.getAllItems();
         assertNotNull(books);
         assertEquals(3, books.size());
     }
 
     @Before
-    public void beforeTestGetBookByIsbn() {
+    public void beforeTestGetItemByUniqueId() {
         bookTreasureIsland = new Book("287462834");
         bookTreasureIslandIsbn = generateIsbn();
         bookTreasureIsland.setIsbn(bookTreasureIslandIsbn);
@@ -87,14 +87,14 @@ public class LibraryStorageTest {
     }
 
     @Test
-    public void testGetBookByIsbn() throws Exception {
+    public void testGetItemByUniqueId() throws Exception {
         Book book = catalogue3.getItemByUniqueId("isbn", bookTreasureIslandIsbn);
         assertNotNull(book);
         assertEquals(bookTreasureIslandIsbn, book.getIsbn());
     }
 
     @Before
-    public void beforeTestUpdateBookDetails() {
+    public void beforeTestUpdateItemDetails() {
         bookHuckFinnIsbn = generateIsbn();
         bookHuckFinn = new Book(bookHuckFinnIsbn);
         bookHuckFinn.setSynopsis("Lorem ipsum dolor sit amet");
@@ -106,7 +106,7 @@ public class LibraryStorageTest {
     }
 
     @Test
-    public void testUpdateBookDetails() throws Exception {
+    public void testUpdateItemDetails() throws Exception {
 
         Book updateBook = new Book(bookHuckFinnIsbn);
         updateBook.setSynopsis("Hapa Kenya Hakuna Matata.");
@@ -121,7 +121,7 @@ public class LibraryStorageTest {
     }
 
     @Before
-    public void beforeTestDeleteBook() {
+    public void beforeTestDeleteItem() {
         bookMeinKampfIsbn = generateIsbn();
         bookMeinKampf = new Book(bookMeinKampfIsbn);
 
@@ -130,7 +130,7 @@ public class LibraryStorageTest {
     }
 
     @Test
-    public void testDeleteBook() throws Exception {
+    public void testDeleteItem() throws Exception {
         assertTrue(catalogue5.deleteItem("isbn", bookMeinKampfIsbn));
 
         Book confirmBook = catalogue5.getItemByUniqueId("isbn", bookMeinKampfIsbn);

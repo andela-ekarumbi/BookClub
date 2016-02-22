@@ -102,10 +102,9 @@ public class LibraryMembers {
 
             if (deleteIndex == -1) {
                 return false;
-            } else {
-                members.remove(deleteIndex);
-                return true;
             }
+            members.remove(deleteIndex);
+            return true;
         } catch (Exception exception){
             return false;
         }

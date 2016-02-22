@@ -13,8 +13,8 @@ public class LibraryStorage<T extends Model> {
         this.items = new ArrayList<>();
     }
 
-    public boolean addItem(T item) {
-        return false;
+    public boolean addNewItem(T item) {
+        return items.add(item);
     }
 
     public boolean addItemCollection(List<T> incomingItems) {

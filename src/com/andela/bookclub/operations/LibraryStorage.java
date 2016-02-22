@@ -32,11 +32,16 @@ public class LibraryStorage<T extends Model> {
     }
 
     public T getItemByUniqueId(String uniquePropertyName, String uniquePropertyValue) {
+        int foundPosition = searchItemByUniqueId(uniquePropertyName, uniquePropertyValue);
+
+        if (foundPosition != -1) {
+            return items.get(foundPosition);
+        }
         return null;
     }
 
     private int searchItemByUniqueId(String uniquePropertyName, String uniquePropertyValue) {
-        return -1;
+        return Utility.searchByPropertyValue(items, uniquePropertyName, uniquePropertyValue);
     }
 
     public boolean updateItemDetails(String uniquePropertyName, String uniquePropertyValue, T incomingItem) {

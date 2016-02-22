@@ -9,7 +9,7 @@ import java.util.*;
 
 public class Library {
 
-    private LibraryCatalogue catalogue;
+    private LibraryStorage<Book> catalogue;
 
     private Map<Book, Queue<BookRequest>> staffBookQueueMap;
 
@@ -28,7 +28,7 @@ public class Library {
         this.staffOnDuty = staffOnDuty;
         this.staffBookQueueMap = new HashMap<>();
         this.studentBookQueueMap = new HashMap<>();
-        this.catalogue = new LibraryCatalogue();
+        this.catalogue = new LibraryStorage<>();
     }
 
     /**

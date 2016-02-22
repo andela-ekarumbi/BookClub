@@ -54,6 +54,12 @@ public class LibraryStorage<T extends Model> {
     }
 
     public boolean deleteItem(String uniquePropertyName, String uniquePropertyValue) {
+        int deleteIndex = searchItemByUniqueId(uniquePropertyName, uniquePropertyValue);
+
+        if (deleteIndex != -1) {
+            items.remove(deleteIndex);
+            return true;
+        }
         return false;
     }
 }

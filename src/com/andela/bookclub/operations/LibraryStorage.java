@@ -45,6 +45,11 @@ public class LibraryStorage<T extends Model> {
     }
 
     public boolean updateItemDetails(String uniquePropertyName, String uniquePropertyValue, T incomingItem) {
+        T existingItem = getItemByUniqueId(uniquePropertyName, uniquePropertyValue);
+
+        if (existingItem != null) {
+            return Utility.copyFieldsFromObject(existingItem, incomingItem);
+        }
         return false;
     }
 

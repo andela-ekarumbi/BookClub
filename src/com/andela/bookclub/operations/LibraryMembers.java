@@ -57,9 +57,8 @@ public class LibraryMembers {
 
         if (foundPosition == -1) {
             return null;
-        } else {
-            return members.get(foundPosition);
         }
+        return members.get(foundPosition);
     }
 
     private int memberSearch(String id) {
@@ -102,10 +101,9 @@ public class LibraryMembers {
 
             if (deleteIndex == -1) {
                 return false;
-            } else {
-                members.remove(deleteIndex);
-                return true;
             }
+            members.remove(deleteIndex);
+            return true;
         } catch (Exception exception){
             return false;
         }

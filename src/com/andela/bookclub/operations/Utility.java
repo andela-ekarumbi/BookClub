@@ -3,7 +3,6 @@ package com.andela.bookclub.operations;
 import com.andela.bookclub.models.Model;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.List;
@@ -20,7 +19,7 @@ public class Utility {
             String returnValue = (String)getter.invoke(objectToCheck);
             return returnValue;
         } catch (Exception exception) {
-
+            exception.printStackTrace();
         }
         return "";
     }

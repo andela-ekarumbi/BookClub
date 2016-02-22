@@ -60,9 +60,8 @@ public class LibraryCatalogue {
 
         if (foundPosition == -1) {
             return null;
-        } else {
-            return books.get(foundPosition);
         }
+        return books.get(foundPosition);
     }
     
     private int searchBookByIsbn(String isbn) {
@@ -100,12 +99,11 @@ public class LibraryCatalogue {
     public boolean deleteBook(String isbn) {
         int deleteIndex = searchBookByIsbn(isbn);
 
-        if (deleteIndex == -1) {
-            return false;
-        } else {
+        if (deleteIndex != -1) {
             books.remove(deleteIndex);
             return true;
         }
+        return false;
     }
 
 

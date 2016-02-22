@@ -57,9 +57,8 @@ public class LibraryMembers {
 
         if (foundPosition == -1) {
             return null;
-        } else {
-            return members.get(foundPosition);
         }
+        return members.get(foundPosition);
     }
 
     private int memberSearch(String id) {

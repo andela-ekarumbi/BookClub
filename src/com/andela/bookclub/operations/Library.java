@@ -9,9 +9,9 @@ import java.util.*;
 
 public class Library {
 
-    private LibraryStorage<Book> catalogue;
+    private LibraryRecords<Book> catalogue;
 
-    private LibraryStorage<Member> members;
+    private LibraryRecords<Member> members;
 
     private Map<Book, Queue<BookRequest>> staffBookQueueMap;
 
@@ -30,8 +30,8 @@ public class Library {
         this.staffOnDuty = staffOnDuty;
         this.staffBookQueueMap = new HashMap<>();
         this.studentBookQueueMap = new HashMap<>();
-        this.catalogue = new LibraryStorage<>();
-        this.members = new LibraryStorage<>();
+        this.catalogue = new LibraryRecords<>();
+        this.members = new LibraryRecords<>();
     }
 
     /**
@@ -237,6 +237,7 @@ public class Library {
 
         if (requests.size() > 0) {
             BookRequest topRequest = requests.remove();
+            topRequest.setGranter(staffOnDuty);
             Member member = topRequest.getBorrower();
             lentBooks.put(book, member);
         }

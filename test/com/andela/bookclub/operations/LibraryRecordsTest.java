@@ -9,17 +9,17 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class LibraryStorageTest {
+public class LibraryRecordsTest {
 
-    private LibraryStorage<Book> catalogue1;
+    private LibraryRecords<Book> catalogue1;
 
-    private LibraryStorage<Book> catalogue2;
+    private LibraryRecords<Book> catalogue2;
 
-    private LibraryStorage<Book> catalogue3;
+    private LibraryRecords<Book> catalogue3;
 
-    private LibraryStorage<Book> catalogue4;
+    private LibraryRecords<Book> catalogue4;
 
-    private LibraryStorage<Book> catalogue5;
+    private LibraryRecords<Book> catalogue5;
 
     private Book bookDavidCopperfield;
 
@@ -43,7 +43,7 @@ public class LibraryStorageTest {
 
     @Before
     public  void beforeTestAddNewItem() {
-        catalogue1 = new LibraryStorage<>();
+        catalogue1 = new LibraryRecords<>();
         bookDavidCopperfield = new Book(generateIsbn());
     }
 
@@ -54,7 +54,7 @@ public class LibraryStorageTest {
 
     @Before
     public void beforeTestGetAllItems() {
-        catalogue2 = new LibraryStorage<>();
+        catalogue2 = new LibraryRecords<>();
 
         List<Book> newBooks = new ArrayList<>();
 
@@ -82,7 +82,7 @@ public class LibraryStorageTest {
         bookTreasureIslandIsbn = generateIsbn();
         bookTreasureIsland.setIsbn(bookTreasureIslandIsbn);
 
-        catalogue3 = new LibraryStorage<>();
+        catalogue3 = new LibraryRecords<>();
         catalogue3.addNewItem(bookTreasureIsland);
     }
 
@@ -101,7 +101,7 @@ public class LibraryStorageTest {
         bookHuckFinn.setTitle("Lorem Ipsum");
         bookHuckFinn.setAuthorName("Unknown Latin Guy");
 
-        catalogue4 = new LibraryStorage<>();
+        catalogue4 = new LibraryRecords<>();
         catalogue4.addNewItem(bookHuckFinn);
     }
 
@@ -125,7 +125,7 @@ public class LibraryStorageTest {
         bookMeinKampfIsbn = generateIsbn();
         bookMeinKampf = new Book(bookMeinKampfIsbn);
 
-        catalogue5 = new LibraryStorage<>();
+        catalogue5 = new LibraryRecords<>();
         catalogue5.addNewItem(bookMeinKampf);
     }
 

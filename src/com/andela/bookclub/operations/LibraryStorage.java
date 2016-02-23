@@ -47,10 +47,7 @@ public class LibraryStorage<T extends Model> {
     public boolean updateItemDetails(String uniquePropertyName, String uniquePropertyValue, T incomingItem) {
         T existingItem = getItemByUniqueId(uniquePropertyName, uniquePropertyValue);
 
-        if (existingItem != null) {
-            return Utility.copyFieldsFromObject(existingItem, incomingItem);
-        }
-        return false;
+        return existingItem != null && Utility.copyFieldsFromObject(existingItem, incomingItem);
     }
 
     public boolean deleteItem(String uniquePropertyName, String uniquePropertyValue) {

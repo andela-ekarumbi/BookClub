@@ -88,7 +88,7 @@ public class LibraryStorageTest {
 
     @Test
     public void testGetItemByUniqueId() throws Exception {
-        Book book = catalogue3.getItemByUniqueId("isbn", bookTreasureIslandIsbn);
+        Book book = catalogue3.getItemByUniqueProperty("isbn", bookTreasureIslandIsbn);
         assertNotNull(book);
         assertEquals(bookTreasureIslandIsbn, book.getIsbn());
     }
@@ -115,7 +115,7 @@ public class LibraryStorageTest {
 
         assertTrue(catalogue4.updateItemDetails("isbn", bookHuckFinnIsbn, updateBook));
 
-        Book changedBook = catalogue4.getItemByUniqueId("isbn", bookHuckFinnIsbn);
+        Book changedBook = catalogue4.getItemByUniqueProperty("isbn", bookHuckFinnIsbn);
         assertEquals("Hapa Kenya Hakuna Matata.", changedBook.getSynopsis());
         assertEquals("Eston Karumbi", changedBook.getAuthorName());
     }
@@ -133,7 +133,7 @@ public class LibraryStorageTest {
     public void testDeleteItem() throws Exception {
         assertTrue(catalogue5.deleteItem("isbn", bookMeinKampfIsbn));
 
-        Book confirmBook = catalogue5.getItemByUniqueId("isbn", bookMeinKampfIsbn);
+        Book confirmBook = catalogue5.getItemByUniqueProperty("isbn", bookMeinKampfIsbn);
         assertEquals(null, confirmBook);
     }
 }

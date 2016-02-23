@@ -11,15 +11,9 @@ import static org.junit.Assert.*;
 
 public class LibraryTest {
 
-    // Private variables
-
-    private Library libraryJohn;
-
     private Library libraryPeter;
 
     private Library libraryJames;
-
-    private StaffMember staffJohn;
 
     private StaffMember staffPeter;
 
@@ -48,19 +42,6 @@ public class LibraryTest {
     private Book bookHuckFinn;
 
     private Book bookThreeMusketeers;
-
-    // Test methods
-
-    @Before
-    public void beforeTestRegisterNewBook() {
-        staffJohn = new StaffMember("123654");
-    }
-
-    @Test
-    public void testRegisterNewBook() throws Exception {
-        libraryJohn = new Library(staffJohn);
-        assertTrue(libraryJohn.registerNewBook(new Book("12309876")));
-    }
 
     @Before
     public void beforeTestAddBookRequest() {

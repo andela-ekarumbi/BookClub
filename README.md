@@ -10,7 +10,7 @@ package com.andela.bookclub;
 
 import com.andela.bookclub.models.StudentMember;
 import com.andela.bookclub.models.StaffMember;
-import com.andela.bookclub.operations.Librarian;
+import com.andela.bookclub.operations.Library;
 
 public class BookClubTest {
     public static void main(String[] args) {
@@ -23,13 +23,13 @@ public class BookClubTest {
         studentJohn.setSchool("School of hard knocks");
         // Other setters
 
-        // Initialize library members collection
+        // Initialize library with staff member on duty
 
-        LibraryMembers members = new LibraryMembers();
+        Library library = new Library(new StaffMember("staffJames"));
 
         // Register the new member
         
-        members.addNewMember(studentJohn);
+        library.addNewMember(studentJohn);
     }
 }
 
@@ -43,7 +43,7 @@ package com.andela.bookclub;
 
 import com.andela.bookclub.models.Book;
 import com.andela.bookclub.models.StaffMember;
-import com.andela.bookclub.operations.Librarian;
+import com.andela.bookclub.operations.Library;
 
 public class BookClubTest {
     public static void main(String[] args) {
@@ -55,19 +55,19 @@ public class BookClubTest {
         treasureIsland.setAuthorName("R.L. Stevenson");
         // Other setters
 
-        // Define staff member on duty, who will be the librarian
+        // Define staff member on duty, who will be the Library
 
         StaffMember staffOnDuty = new StaffMember();
         staffOnDuty.setSurname("Smith");
         // Other setters
 
-        // Initialize librarian with staff member on duty
+        // Initialize library with staff member on duty
 
-        Librarian librarian = new Librarian(staffOnDuty);
+        Library library = new Library(staffOnDuty);
 
-        // Use the librarian to register the new book
+        // Register the new book
 
-        librarian.registerNewBook(treasureIsland);
+        library.registerNewBook(treasureIsland);
     }
 }
 
@@ -83,21 +83,28 @@ import com.andela.bookclub.models.Book;
 import com.andela.bookclub.models.BookRequest;
 import com.andela.bookclub.models.Member;
 import com.andela.bookclub.models.StaffMember;
-import com.andela.bookclub.operations.Librarian;
-import com.andela.bookclub.operations.LibraryMembers;
-import com.andela.bookclub.operations.LibraryCatalogue;
+import com.andela.bookclub.operations.Library;
 
 public class BookClubTest {
     public static void main(String[] args) {
+    
+        // Define staff member on duty, who will be the librarian.
+        
+        StaffMember staffOnDuty = new StaffMember("staffSmith");
+        staffOnDuty.setSurname("Smith");
+        // Other setters
+        
+        // Initialize library with staff member on duty
+        
+        Library library = new Library(staffOnDuty);
+        
         // Get book to be borrowed
 
-        LibraryCatalogue catalogue = new LibraryCatalogue();
-
-        Book treasureIsland = catalogue.getBookByIsbn("123456");
+        Book treasureIsland = library.getBookByIsbn("123456");
 
         // Get member to borrow the book
 
-        Member studentJohn = (new LibraryMembers()).getMemberById("234765");
+        Member studentJohn = library.getMemberById("234765");
 
         // Create a new book request
 
@@ -106,19 +113,9 @@ public class BookClubTest {
         request.setRequestedBook(treasureIsland);
         // Other setters
         
-        // Define staff member on duty, who will be the librarian
+        // Add the book request
 
-        StaffMember staffOnDuty = new StaffMember();
-        staffOnDuty.setSurname("Smith");
-        // Other setters
-
-        // Initialize librarian with staff member on duty
-
-        Librarian librarian = new Librarian(staffOnDuty);
-
-        // Use the librarian to add the book request
-
-        librarian.addBookRequest(request);
+        library.addBookRequest(request);
     }
 }
 

@@ -5,11 +5,11 @@ import com.andela.bookclub.models.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LibraryStorage<T extends Model> {
+public class LibraryRecords<T extends Model> {
 
     private List<T> items;
 
-    public LibraryStorage() {
+    public LibraryRecords() {
         this.items = new ArrayList<>();
     }
 
